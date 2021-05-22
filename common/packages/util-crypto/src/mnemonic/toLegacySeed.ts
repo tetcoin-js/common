@@ -1,0 +1,33 @@
+// Copyright 2017-2021 @polkadot/util-crypto authors & contributors
+// SPDX-License-Identifier: Apache-2.0
+
+import { assert } from '@tetcoin/util';
+import { bip39ToSeed, isReady } from '@tetcoin/wasm-crypto';
+
+import { mnemonicToSeedSync } from './bip39';
+import { mnemonicValidate } from './validate';
+
+/**
+ * @name toSeed
+ * @summary Creates a valid Vapory/Bitcoin-compatible seed from a mnemonic input
+ * @example
+ * <BR>
+ *
+ * ```javascript
+ * import { mnemonicGenerate, mnemonicToBip39, mnemonicValidate } from '@tetcoin/util-crypto';
+ *
+ * const mnemonic = mnemonicGenerate(); // => string
+ * const isValidMnemonic = mnemonicValidate(mnemonic); // => boolean
+ *
+ * if (isValidMnemonic) {
+ *   console.log(`Seed generated from mnemonic: ${mnemonicToBip39(mnemonic)}`); => u8a
+ * }
+ * ```
+ */
+export function mnemonicToLegacySeed (mnemonic: string, password = '', onlyJs = false): Uint8Array {
+  assert(mnemonicValidate(mnemonic), 'Invalid bip39 mnemonic specified');
+
+  return isReady() && !onlyJs
+    ? bip39ToSeed(mnemonic, password)
+    : mnemonicToSeedSync(mnemonic, password).subarray(0, 32);
+}
