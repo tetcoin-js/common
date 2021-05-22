@@ -5,11 +5,11 @@ import type { Ss58Registry } from './types';
 
 import fs from 'fs';
 
-import { fetch } from '@polkadot/x-fetch';
+import { fetch } from '@tetcoin/x-fetch';
 
 import { all } from './';
 
-const ORIGINAL = 'https://raw.githubusercontent.com/paritytech/substrate/master/ss58-registry.json';
+const ORIGINAL = 'https://raw.githubusercontent.com/tetcoin/tetcore/master/ss58-registry.json';
 const OUTPUT = './.github/ss58-check.md';
 
 function assertAndLog (check: boolean, error: string): void {
@@ -23,7 +23,7 @@ ${error}
   }
 }
 
-describe('check latest Substrate ss58 registry', (): void => {
+describe('check latest Tetcore ss58 registry', (): void => {
   let original: Ss58Registry;
 
   beforeAll(async (): Promise<void> => {

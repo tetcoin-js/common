@@ -3,8 +3,8 @@
 
 import type { Keypair } from '../types';
 
-import { assert, u8aToU8a } from '@polkadot/util';
-import { sr25519Sign } from '@polkadot/wasm-crypto';
+import { assert, u8aToU8a } from '@tetcoin/util';
+import { sr25519Sign } from '@tetcoin/wasm-crypto';
 
 /**
  * @name schnorrkelSign

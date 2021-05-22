@@ -3,8 +3,8 @@
 
 import type { KeyringPair, KeyringPairs } from './types';
 
-import { assert, isHex, isU8a, u8aToHex, u8aToU8a } from '@polkadot/util';
-import { decodeAddress } from '@polkadot/util-crypto';
+import { assert, isHex, isU8a, u8aToHex, u8aToU8a } from '@tetcoin/util';
+import { decodeAddress } from '@tetcoin/util-crypto';
 
 type KeyringPairMap = Record<string, KeyringPair>;
 

@@ -23,7 +23,7 @@ describe('checkAddressChecksum', (): void => {
     ).toEqual([true, 34, 2, 255]);
   });
 
-  it('correctly extracts the info from a 2-byte-prefix address (ecdsa, from Substrate)', (): void => {
+  it('correctly extracts the info from a 2-byte-prefix address (ecdsa, from Tetcore)', (): void => {
     expect(
       checkAddressChecksum(base58Decode('4pbsSkWcBaYoFHrKJZp5fDVUKbqSYD9dhZZGvpp3vQ5ysVs5ybV'))
     ).toEqual([true, 35, 2, 200]);

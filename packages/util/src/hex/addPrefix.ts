@@ -12,7 +12,7 @@ import { hexHasPrefix } from './hasPrefix';
  * <BR>
  *
  * ```javascript
- * import { hexAddPrefix } from '@polkadot/util';
+ * import { hexAddPrefix } from '@tetcoin/util';
  *
  * console.log('With prefix', hexAddPrefix('0a0b12')); // => 0x0a0b12
  * ```

@@ -1,21 +1,21 @@
 // Copyright 2017-2021 @polkadot/util authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-const config = require('@polkadot/dev/config/jest.cjs');
+const config = require('@tetcoin/dev/config/jest.cjs');
 
 module.exports = Object.assign({}, config, {
   moduleNameMapper: {
-    '@polkadot/hw-ledger-transports(.*)$': '<rootDir>/packages/hw-ledger-transports/src/node',
+    '@tetcoin/hw-ledger-transports(.*)$': '<rootDir>/packages/hw-ledger-transports/src/node',
     // eslint-disable-next-line sort-keys
-    '@polkadot/hw-ledger(.*)$': '<rootDir>/packages/hw-ledger/src/$1',
-    '@polkadot/keyring(.*)$': '<rootDir>/packages/keyring/src/$1',
-    '@polkadot/networks(.*)$': '<rootDir>/packages/networks/src/$1',
-    '@polkadot/util-(crypto)(.*)$': '<rootDir>/packages/util-$1/src/$2',
+    '@tetcoin/hw-ledger(.*)$': '<rootDir>/packages/hw-ledger/src/$1',
+    '@tetcoin/keyring(.*)$': '<rootDir>/packages/keyring/src/$1',
+    '@tetcoin/networks(.*)$': '<rootDir>/packages/networks/src/$1',
+    '@tetcoin/util-(crypto)(.*)$': '<rootDir>/packages/util-$1/src/$2',
     // eslint-disable-next-line sort-keys
-    '@polkadot/util(.*)$': '<rootDir>/packages/util/src/$1',
-    '@polkadot/x-(fetch|randomvalues|textdecoder|textencoder|ws)(.*)$': '<rootDir>/packages/x-$1/src/node',
-    '@polkadot/x-global(.*)$': '<rootDir>/packages/x-global/src/$1',
-    '@polkadot/x-rxjs(.*)$': '<rootDir>/packages/x-rxjs/src/$1'
+    '@tetcoin/util(.*)$': '<rootDir>/packages/util/src/$1',
+    '@tetcoin/x-(fetch|randomvalues|textdecoder|textencoder|ws)(.*)$': '<rootDir>/packages/x-$1/src/node',
+    '@tetcoin/x-global(.*)$': '<rootDir>/packages/x-global/src/$1',
+    '@tetcoin/x-rxjs(.*)$': '<rootDir>/packages/x-rxjs/src/$1'
   },
   modulePathIgnorePatterns: [
     '<rootDir>/packages/hw-ledger/build',
@@ -32,5 +32,5 @@ module.exports = Object.assign({}, config, {
     '<rootDir>/packages/x-textencoder/build',
     '<rootDir>/packages/x-ws/build'
   ],
-  resolver: '@polkadot/dev/config/jest-resolver.cjs'
+  resolver: '@tetcoin/dev/config/jest-resolver.cjs'
 });

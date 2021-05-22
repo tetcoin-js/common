@@ -1,8 +1,8 @@
 // Copyright 2017-2021 @polkadot/keyring authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { hexToU8a } from '@polkadot/util';
-import { cryptoWaitReady, encodeAddress as toSS58, setSS58Format } from '@polkadot/util-crypto';
+import { hexToU8a } from '@tetcoin/util';
+import { cryptoWaitReady, encodeAddress as toSS58, setSS58Format } from '@tetcoin/util-crypto';
 
 import { PAIRS } from '../testing';
 import { createTestPairs } from '../testingPairs';
@@ -141,9 +141,9 @@ describe('pair', (): void => {
     ).toThrow('Cannot sign with a locked key pair');
   });
 
-  describe('ethereum', (): void => {
+  describe('vapory', (): void => {
     it('has a valid address from a known public', (): void => {
-      const pair = createPair({ toSS58, type: 'ethereum' }, { publicKey: hexToU8a('0x03b9dc646dd71118e5f7fda681ad9eca36eb3ee96f344f582fbe7b5bcdebb13077') });
+      const pair = createPair({ toSS58, type: 'vapory' }, { publicKey: hexToU8a('0x03b9dc646dd71118e5f7fda681ad9eca36eb3ee96f344f582fbe7b5bcdebb13077') });
 
       expect(pair.address).toEqual('0x4119b2e6c3Cb618F4f0B93ac77f9BeeC7FF02887');
       expect(pair.addressRaw).toEqual(hexToU8a('0x4119b2e6c3Cb618F4f0B93ac77f9BeeC7FF02887'));

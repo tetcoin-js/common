@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @polkadot/util authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { xglobal } from '@polkadot/x-global';
+import { xglobal } from '@tetcoin/x-global';
 
 import { isFunction } from './is/function';
 import { isString } from './is/string';
@@ -21,7 +21,7 @@ interface VersionPath {
 }
 
 interface PjsChecks extends This {
-  __polkadotjs: Record<string, VersionPath[]>;
+  __tetcoinjs: Record<string, VersionPath[]>;
 }
 
 type PjsWindow = (Window & This) & PjsChecks;
@@ -36,15 +36,15 @@ function expandPath (path?: string): string {
 function getEntry (name: string): VersionPath[] {
   const _global = xglobal as PjsWindow;
 
-  if (!_global.__polkadotjs) {
-    _global.__polkadotjs = {};
+  if (!_global.__tetcoinjs) {
+    _global.__tetcoinjs = {};
   }
 
-  if (!_global.__polkadotjs[name]) {
-    _global.__polkadotjs[name] = [];
+  if (!_global.__tetcoinjs[name]) {
+    _global.__tetcoinjs[name] = [];
   }
 
-  return _global.__polkadotjs[name];
+  return _global.__tetcoinjs[name];
 }
 
 /** @internal */
@@ -79,7 +79,7 @@ function getPath (pathOrFn?: FnString | string | false): false | string | undefi
  * @summary Checks that a specific package is only imported once
  */
 export function detectPackage ({ name, version }: PackageJson, pathOrFn?: FnString | string | false): void {
-  assert(name.startsWith('@polkadot'), `Invalid package descriptor ${name}`);
+  assert(name.startsWith('@tetcoin'), `Invalid package descriptor ${name}`);
 
   const entry = getEntry(name);
 

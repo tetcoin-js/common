@@ -10,7 +10,7 @@ describe('checkAddress', (): void => {
     ).toEqual([true, null]);
   });
 
-  it('returns [true, null] for Substrate', (): void => {
+  it('returns [true, null] for Tetcore', (): void => {
     expect(
       checkAddress('5EnxxUmEbw8DkENKiYuZ1DwQuMoB2UWEQJZZXrTsxoz7SpgG', 42)
     ).toEqual([true, null]);
@@ -22,7 +22,7 @@ describe('checkAddress', (): void => {
     ).toEqual([false, 'Invalid base58 character "I" (0x49) at index 4']);
   });
 
-  it('fails with invalid prefix when checking Substrate against Kusama prefix', (): void => {
+  it('fails with invalid prefix when checking Tetcore against Kusama prefix', (): void => {
     expect(
       checkAddress('5EnxxUmEbw8DkENKiYuZ1DwQuMoB2UWEQJZZXrTsxoz7SpgG', 2)
     ).toEqual([false, 'Prefix mismatch, expected 2, found 42']);

@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { u8aToHex } from '@polkadot/util';
+import { u8aToHex } from '@tetcoin/util';
 
 import { randomAsU8a } from './asU8a';
 
@@ -14,7 +14,7 @@ import { randomAsU8a } from './asU8a';
  * <BR>
  *
  * ```javascript
- * import { randomAsHex } from '@polkadot/util-crypto';
+ * import { randomAsHex } from '@tetcoin/util-crypto';
  *
  * randomAsHex(); // => 0x...
  * ```

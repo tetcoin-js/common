@@ -2,11 +2,11 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // This contains exactly the same information as available in (with some extensions)
-// https://raw.githubusercontent.com/paritytech/substrate/master/ss58-registry.json
+// https://raw.githubusercontent.com/tetcoin/tetcore/master/ss58-registry.json
 //
 // Once the above is published as a package, the duplication here can be removed
 
-import type { Network, NetworkFromSubstrate, NetworkFromSubstrateNamed } from './types';
+import type { Network, NetworkFromTetcore, NetworkFromTetcoreNamed } from './types';
 
 // These are known prefixes that are not sorted
 const UNSORTED = [0, 2, 42];
@@ -16,7 +16,7 @@ const UNSORTED = [0, 2, 42];
 // last. This make lookups for the current a simple genesisHash[0]
 // (See Kusama as an example)
 
-const createReserved = (prefix: number, displayName: string, network: string | null = null): NetworkFromSubstrate => ({
+const createReserved = (prefix: number, displayName: string, network: string | null = null): NetworkFromTetcore => ({
   decimals: null,
   displayName,
   isIgnored: true,
@@ -27,19 +27,19 @@ const createReserved = (prefix: number, displayName: string, network: string | n
   website: null
 });
 
-const all: NetworkFromSubstrate[] = [
+const all: NetworkFromTetcore[] = [
   {
     decimals: [10],
-    displayName: 'Polkadot Relay Chain',
+    displayName: 'Tetcoin Relay Chain',
     genesisHash: ['0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3'],
     hasLedgerSupport: true,
-    icon: 'polkadot',
-    network: 'polkadot',
+    icon: 'tetcoin',
+    network: 'tetcoin',
     prefix: 0,
     slip44: 0x00000162,
     standardAccount: '*25519',
     symbols: ['DOT'],
-    website: 'https://polkadot.network'
+    website: 'https://tetcoin.org'
   },
   createReserved(1, 'Bare 32-bit Schnorr/Ristretto (S/R 25519) public key.'),
   {
@@ -51,7 +51,7 @@ const all: NetworkFromSubstrate[] = [
       '0x3fd7b9eb6a00376e5be61f01abb429ffb0b104be05eaff4d458da48fcd425baf' // Kusama CC1
     ],
     hasLedgerSupport: true,
-    icon: 'polkadot',
+    icon: 'tetcoin',
     network: 'kusama',
     prefix: 2,
     slip44: 0x000001b2,
@@ -148,12 +148,12 @@ const all: NetworkFromSubstrate[] = [
   },
   {
     decimals: null,
-    displayName: 'SubstraTEE',
-    network: 'substratee',
+    displayName: 'TetcoreTEE',
+    network: 'tetcoretee',
     prefix: 13,
     standardAccount: '*25519',
     symbols: null,
-    website: 'https://www.substratee.com'
+    website: 'https://tee.tetcoin.org'
   },
   {
     decimals: [0],
@@ -419,12 +419,12 @@ const all: NetworkFromSubstrate[] = [
   },
   {
     decimals: null,
-    displayName: 'Substrate',
-    network: 'substrate',
+    displayName: 'Tetcore',
+    network: 'tetcore',
     prefix: 42,
     standardAccount: '*25519',
     symbols: null,
-    website: 'https://substrate.dev/'
+    website: 'https://tetcore.dev/'
   },
   createReserved(43, 'Bare 32-bit ECDSA SECP-256k1 public key.'),
   {
@@ -470,11 +470,11 @@ const all: NetworkFromSubstrate[] = [
 // The list of available/claimed prefixes
 //   - no testnets
 //   - we only include those where we have a standardAccount
-//   - when no icon has been specified, default to substrate
+//   - when no icon has been specified, default to tetcore
 //   - sort by name, however we keep 0, 2, 42 first in the list
 const available: Network[] = all
-  .filter((n): n is NetworkFromSubstrateNamed => !n.isIgnored && !!n.network)
-  .map((n) => ({ ...n, genesisHash: n.genesisHash || [], icon: n.icon || 'substrate' }))
+  .filter((n): n is NetworkFromTetcoreNamed => !n.isIgnored && !!n.network)
+  .map((n) => ({ ...n, genesisHash: n.genesisHash || [], icon: n.icon || 'tetcore' }))
   .sort((a, b) =>
     UNSORTED.includes(a.prefix) && UNSORTED.includes(b.prefix)
       ? 0

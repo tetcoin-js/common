@@ -13,7 +13,7 @@ type FnType = Function;
  * <BR>
  *
  * ```javascript
- * import { isFunction } from '@polkadot/util';
+ * import { isFunction } from '@tetcoin/util';
  *
  * isFunction(() => false); // => true
  * ```

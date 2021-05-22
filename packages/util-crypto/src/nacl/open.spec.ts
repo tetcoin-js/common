@@ -21,7 +21,7 @@ describe('naclOpen', (): void => {
     );
   });
 
-  it('polkadot does double ratchet', () => {
+  it('tetcoin does double ratchet', () => {
     const sender = naclKeypairFromString('sender');
     const receiver = naclKeypairFromString('receiver');
 

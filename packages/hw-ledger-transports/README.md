@@ -1,2 +1,2 @@
-# @polkadot/hw-ledger-transports
+# @tetcoin/hw-ledger-transports
 

@@ -1,11 +1,11 @@
-# @polkadot/x-fetch
+# @tetcoin/x-fetch
 
 A cross-environment fetch.
 
-Install it via `yarn add @polkadot/x-fetch`
+Install it via `yarn add @tetcoin/x-fetch`
 
 ```js
-import { fetch } from '@polkadot/x-fetch';
+import { fetch } from '@tetcoin/x-fetch';
 
 ...
 const response = await fetch('https://example.com/something.json');

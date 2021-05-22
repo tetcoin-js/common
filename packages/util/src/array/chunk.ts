@@ -10,7 +10,7 @@
  * <BR>
  *
  * ```javascript
- * import { arrayChunk } from '@polkadot/util';
+ * import { arrayChunk } from '@tetcoin/util';
  *
  * arrayChunk([1, 2, 3, 4, 5]); // [[1, 2], [3, 4], [5]]
  * ```

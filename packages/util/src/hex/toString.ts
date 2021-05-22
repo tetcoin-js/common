@@ -13,7 +13,7 @@ import { hexToU8a } from './toU8a';
  * <BR>
  *
  * ```javascript
- * import { hexToString } from '@polkadot/util';
+ * import { hexToString } from '@tetcoin/util';
  *
  * hexToU8a('0x68656c6c6f'); // hello
  * ```

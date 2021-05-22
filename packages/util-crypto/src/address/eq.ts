@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { u8aEq } from '@polkadot/util';
+import { u8aEq } from '@tetcoin/util';
 
 import { decodeAddress } from './decode';
 
@@ -14,7 +14,7 @@ import { decodeAddress } from './decode';
  * <BR>
  *
  * ```javascript
- * import { u8aEq } from '@polkadot/util';
+ * import { u8aEq } from '@tetcoin/util';
  *
  * u8aEq(new Uint8Array([0x68, 0x65]), new Uint8Array([0x68, 0x65])); // true
  * ```

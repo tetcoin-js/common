@@ -3,7 +3,7 @@
 
 import util from 'util';
 
-import { xglobal } from '@polkadot/x-global';
+import { xglobal } from '@tetcoin/x-global';
 
 class NodeFallback {
   #encoder: util.TextEncoder;

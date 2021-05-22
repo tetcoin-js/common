@@ -11,7 +11,7 @@ export * from './base58';
 export * from './base64';
 export * from './blake2';
 export * from './crypto';
-export * from './ethereum';
+export * from './vapory';
 export * from './hd';
 export * from './hmac';
 export * from './keccak';

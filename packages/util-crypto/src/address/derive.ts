@@ -3,7 +3,7 @@
 
 import type { Prefix } from './types';
 
-import { assert } from '@polkadot/util';
+import { assert } from '@tetcoin/util';
 
 import { keyExtractPath } from '../key';
 import { DeriveJunction } from '../key/DeriveJunction';

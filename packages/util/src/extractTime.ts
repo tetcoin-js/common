@@ -72,7 +72,7 @@ function extractSecs (milliseconds: number): Time {
  * <BR>
  *
  * ```javascript
- * import { extractTime } from '@polkadot/util';
+ * import { extractTime } from '@tetcoin/util';
  *
  * const { days, minutes, hours, seconds, milliseconds } = extractTime(6000); // 0, 0, 10, 0, 0
  * ```

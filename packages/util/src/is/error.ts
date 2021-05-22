@@ -12,7 +12,7 @@ import { isInstanceOf } from './instanceOf';
  * <BR>
  *
  * ```javascript
- * import { isError } from '@polkadot/util';
+ * import { isError } from '@tetcoin/util';
  *
  * console.log('isError', isError(new Error('message'))); // => true
  * ```

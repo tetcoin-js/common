@@ -1,11 +1,11 @@
 // Copyright 2017-2021 @polkadot/keyring authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { Keypair, KeypairType } from '@polkadot/util-crypto/types';
+import type { Keypair, KeypairType } from '@tetcoin/util-crypto/types';
 import type { KeyringInstance, KeyringOptions, KeyringPair, KeyringPair$Json, KeyringPair$JsonEncodingTypes, KeyringPair$Meta } from './types';
 
-import { assert, hexToU8a, isHex, isUndefined, stringToU8a } from '@polkadot/util';
-import { base64Decode, decodeAddress, encodeAddress, keyExtractSuri, keyFromPath, mnemonicToLegacySeed, mnemonicToMiniSecret, naclKeypairFromSeed as naclFromSeed, schnorrkelKeypairFromSeed as schnorrkelFromSeed, secp256k1KeypairFromSeed as secp256k1FromSeed } from '@polkadot/util-crypto';
+import { assert, hexToU8a, isHex, isUndefined, stringToU8a } from '@tetcoin/util';
+import { base64Decode, decodeAddress, encodeAddress, keyExtractSuri, keyFromPath, mnemonicToLegacySeed, mnemonicToMiniSecret, naclKeypairFromSeed as naclFromSeed, schnorrkelKeypairFromSeed as schnorrkelFromSeed, secp256k1KeypairFromSeed as secp256k1FromSeed } from '@tetcoin/util-crypto';
 
 import { DEV_PHRASE } from './defaults';
 import { createPair } from './pair';
@@ -14,12 +14,12 @@ import { Pairs } from './pairs';
 const keypairFromSeed = {
   ecdsa: (seed: Uint8Array): Keypair => secp256k1FromSeed(seed),
   ed25519: (seed: Uint8Array): Keypair => naclFromSeed(seed),
-  ethereum: (seed: Uint8Array): Keypair => secp256k1FromSeed(seed),
+  vapory: (seed: Uint8Array): Keypair => secp256k1FromSeed(seed),
   sr25519: (seed: Uint8Array): Keypair => schnorrkelFromSeed(seed)
 };
 
 /**
- * # @polkadot/keyring
+ * # @tetcoin/keyring
  *
  * ## Overview
  *
@@ -46,7 +46,7 @@ export class Keyring implements KeyringInstance {
   constructor (options: KeyringOptions = {}) {
     options.type = options.type || 'ed25519';
 
-    assert(options && ['ecdsa', 'ethereum', 'ed25519', 'sr25519'].includes(options.type || 'undefined'), `Expected a keyring type of either 'ed25519', 'sr25519' or 'ecdsa', found '${options.type}`);
+    assert(options && ['ecdsa', 'vapory', 'ed25519', 'sr25519'].includes(options.type || 'undefined'), `Expected a keyring type of either 'ed25519', 'sr25519' or 'ecdsa', found '${options.type}`);
 
     this.#pairs = new Pairs();
     this.#ss58 = options.ss58Format;
@@ -182,7 +182,7 @@ export class Keyring implements KeyringInstance {
       const parts = str.split(' ');
 
       if ([12, 15, 18, 21, 24].includes(parts.length)) {
-        seed = type === 'ethereum'
+        seed = type === 'vapory'
           ? mnemonicToLegacySeed(phrase)
           : mnemonicToMiniSecret(phrase, password);
       } else {
@@ -192,7 +192,7 @@ export class Keyring implements KeyringInstance {
       }
     }
 
-    // FIXME Need to support Ethereum-type derivation paths
+    // FIXME Need to support Vapory-type derivation paths
     const derived = keyFromPath(keypairFromSeed[type](seed), path, type);
 
     return createPair({ toSS58: this.encodeAddress, type }, derived, meta, null);
@@ -259,7 +259,7 @@ export class Keyring implements KeyringInstance {
    * @summary Returns a JSON object associated with the input argument that contains metadata assocated with an account
    * @description Returns a JSON object containing the metadata associated with an account
    * when valid address or public key and when the account passphrase is provided if the account secret
-   * is not already unlocked and available in memory. Note that in [Polkadot-JS Apps](https://github.com/polkadot-js/apps) the user
+   * is not already unlocked and available in memory. Note that in [Tetcoin-JS Apps](https://github.com/tetcoinjs/apps) the user
    * may backup their account to a JSON file that contains this information.
    */
   public toJson (address: string | Uint8Array, passphrase?: string): KeyringPair$Json {

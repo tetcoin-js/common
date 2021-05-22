@@ -3,8 +3,8 @@
 
 import nacl from 'tweetnacl';
 
-import { assert, u8aToU8a } from '@polkadot/util';
-import { ed25519Verify, isReady } from '@polkadot/wasm-crypto';
+import { assert, u8aToU8a } from '@tetcoin/util';
+import { ed25519Verify, isReady } from '@tetcoin/wasm-crypto';
 
 /**
  * @name naclSign
@@ -15,7 +15,7 @@ import { ed25519Verify, isReady } from '@polkadot/wasm-crypto';
  * <BR>
  *
  * ```javascript
- * import { naclVerify } from '@polkadot/util-crypto';
+ * import { naclVerify } from '@tetcoin/util-crypto';
  *
  * naclVerify([...], [...], [...]); // => true/false
  * ```

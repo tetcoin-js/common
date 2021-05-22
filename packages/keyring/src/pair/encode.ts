@@ -3,8 +3,8 @@
 
 import type { PairInfo } from './types';
 
-import { assert, u8aConcat } from '@polkadot/util';
-import { naclEncrypt, scryptEncode, scryptToU8a } from '@polkadot/util-crypto';
+import { assert, u8aConcat } from '@tetcoin/util';
+import { naclEncrypt, scryptEncode, scryptToU8a } from '@tetcoin/util-crypto';
 
 import { PKCS8_DIVIDER, PKCS8_HEADER } from './defaults';
 

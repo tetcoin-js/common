@@ -3,7 +3,7 @@
 
 import ws from 'websocket';
 
-import { xglobal } from '@polkadot/x-global';
+import { xglobal } from '@tetcoin/x-global';
 
 export const WebSocket = typeof xglobal.WebSocket === 'undefined'
   ? ws.w3cwebsocket as unknown as typeof xglobal.WebSocket

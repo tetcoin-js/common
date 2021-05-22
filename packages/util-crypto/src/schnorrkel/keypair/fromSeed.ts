@@ -3,7 +3,7 @@
 
 import type { Keypair } from '../../types';
 
-import { sr25519KeypairFromSeed } from '@polkadot/wasm-crypto';
+import { sr25519KeypairFromSeed } from '@tetcoin/wasm-crypto';
 
 import { schnorrkelKeypairFromU8a } from './fromU8a';
 

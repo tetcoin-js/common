@@ -3,7 +3,7 @@
 
 import BN from 'bn.js';
 
-import { hexToBn } from '@polkadot/util';
+import { hexToBn } from '@tetcoin/util';
 
 import { randomAsHex } from './asHex';
 
@@ -18,7 +18,7 @@ const BN_53 = new BN(0b11111111111111111111111111111111111111111111111111111);
  * <BR>
  *
  * ```javascript
- * import { randomAsNumber } from '@polkadot/util-crypto';
+ * import { randomAsNumber } from '@tetcoin/util-crypto';
  *
  * randomAsNumber(); // => <random number>
  * ```

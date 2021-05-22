@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { hexToU8a, stringToU8a, u8aToHex } from '@polkadot/util';
+import { hexToU8a, stringToU8a, u8aToHex } from '@tetcoin/util';
 
 import { createTestPairs, TestKeyringMap } from '../../../keyring/src/testingPairs';
 import { decodeAddress } from '.';
@@ -97,7 +97,7 @@ describe('decodeAddress', (): void => {
     );
   });
 
-  it('decodes a 2-byte prefix (ecdsa, from Substrate)', (): void => {
+  it('decodes a 2-byte prefix (ecdsa, from Tetcore)', (): void => {
     expect(
       u8aToHex(decodeAddress('4pbsSkWcBaYoFHrKJZp5fDVUKbqSYD9dhZZGvpp3vQ5ysVs5ybV'))
     ).toEqual('0x035676109c54b9a16d271abeb4954316a40a32bcce023ac14c8e26e958aa68fba9');

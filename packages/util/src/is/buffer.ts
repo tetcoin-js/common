@@ -10,7 +10,7 @@
  * <BR>
  *
  * ```javascript
- * import { isBuffer } from '@polkadot/util';
+ * import { isBuffer } from '@tetcoin/util';
  *
  * console.log('isBuffer', isBuffer(Buffer.from([]))); // => true
  * ```

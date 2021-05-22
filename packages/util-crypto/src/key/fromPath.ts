@@ -11,8 +11,8 @@ import { keyHdkdSr25519 } from './hdkdSr25519';
 const generators = {
   ecdsa: keyHdkdEcdsa,
   ed25519: keyHdkdEd25519,
-  // FIXME This is Substrate-compatible, not Ethereum-compatible
-  ethereum: keyHdkdEcdsa,
+  // FIXME This is Tetcore-compatible, not Vapory-compatible
+  vapory: keyHdkdEcdsa,
   sr25519: keyHdkdSr25519
 };
 

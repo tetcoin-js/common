@@ -1,8 +1,8 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { assert, u8aToU8a } from '@polkadot/util';
-import { sr25519Verify } from '@polkadot/wasm-crypto';
+import { assert, u8aToU8a } from '@tetcoin/util';
+import { sr25519Verify } from '@tetcoin/wasm-crypto';
 
 /**
  * @name schnorrkelVerify

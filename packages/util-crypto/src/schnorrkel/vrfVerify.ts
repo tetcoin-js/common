@@ -1,8 +1,8 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { assert, u8aToU8a } from '@polkadot/util';
-import { vrfVerify } from '@polkadot/wasm-crypto';
+import { assert, u8aToU8a } from '@tetcoin/util';
+import { vrfVerify } from '@tetcoin/wasm-crypto';
 
 const EMPTY_U8A = new Uint8Array();
 

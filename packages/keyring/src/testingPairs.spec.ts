@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @polkadot/keyring authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { cryptoWaitReady } from '@polkadot/util-crypto';
+import { cryptoWaitReady } from '@tetcoin/util-crypto';
 
 import { createTestPairs } from './testingPairs';
 

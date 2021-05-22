@@ -15,7 +15,7 @@ interface ObjectIndexed {
  * <BR>
  *
  * ```javascript
- * import { isObject } from '@polkadot/util';
+ * import { isObject } from '@tetcoin/util';
  *
  * isObject({}); // => true
  * isObject('something'); // => false

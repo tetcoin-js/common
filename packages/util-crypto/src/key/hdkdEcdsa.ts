@@ -3,7 +3,7 @@
 
 import type { Keypair } from '../types';
 
-import { assert } from '@polkadot/util';
+import { assert } from '@tetcoin/util';
 
 import { secp256k1DeriveHard } from '../secp256k1/deriveHard';
 import { secp256k1KeypairFromSeed } from '../secp256k1/keypair/fromSeed';

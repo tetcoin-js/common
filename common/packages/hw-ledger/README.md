@@ -1,2 +1,0 @@
-# @tetcoin/hw-ledger
-

@@ -1,8 +1,8 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { assert, stringToU8a } from '@polkadot/util';
-import { bip39ToMiniSecret, isReady } from '@polkadot/wasm-crypto';
+import { assert, stringToU8a } from '@tetcoin/util';
+import { bip39ToMiniSecret, isReady } from '@tetcoin/wasm-crypto';
 
 import { pbkdf2Encode } from '../pbkdf2';
 import { mnemonicToEntropy } from './toEntropy';

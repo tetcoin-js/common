@@ -15,7 +15,7 @@ type MessageFn = () => string;
  * <BR>
  *
  * ```javascript
- * const { assert } from '@polkadot/util';
+ * const { assert } from '@tetcoin/util';
  *
  * assert(true, 'True should be true'); // passes
  * assert(false, 'False should not be true'); // Error thrown

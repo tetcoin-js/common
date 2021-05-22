@@ -1,12 +1,12 @@
 // Copyright 2017-2021 @polkadot/keyring authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { Keypair, KeypairType } from '@polkadot/util-crypto/types';
+import type { Keypair, KeypairType } from '@tetcoin/util-crypto/types';
 import type { KeyringPair, KeyringPair$Json, KeyringPair$JsonEncodingTypes, KeyringPair$Meta, SignOptions } from '../types';
 import type { PairInfo } from './types';
 
-import { assert, u8aConcat, u8aEq, u8aToHex, u8aToU8a } from '@polkadot/util';
-import { blake2AsU8a, ethereumEncode, keccakAsU8a, keyExtractPath, keyFromPath, naclKeypairFromSeed as naclFromSeed, naclSign, schnorrkelKeypairFromSeed as schnorrkelFromSeed, schnorrkelSign, schnorrkelVrfSign, schnorrkelVrfVerify, secp256k1Compress, secp256k1Expand, secp256k1KeypairFromSeed as secp256k1FromSeed, secp256k1Sign, signatureVerify } from '@polkadot/util-crypto';
+import { assert, u8aConcat, u8aEq, u8aToHex, u8aToU8a } from '@tetcoin/util';
+import { blake2AsU8a, vaporyEncode, keccakAsU8a, keyExtractPath, keyFromPath, naclKeypairFromSeed as naclFromSeed, naclSign, schnorrkelKeypairFromSeed as schnorrkelFromSeed, schnorrkelSign, schnorrkelVrfSign, schnorrkelVrfVerify, secp256k1Compress, secp256k1Expand, secp256k1KeypairFromSeed as secp256k1FromSeed, secp256k1Sign, signatureVerify } from '@tetcoin/util-crypto';
 
 import { decodePair } from './decode';
 import { encodePair } from './encode';
@@ -22,28 +22,28 @@ const SIG_TYPE_NONE = new Uint8Array();
 const TYPE_FROM_SEED = {
   ecdsa: secp256k1FromSeed,
   ed25519: naclFromSeed,
-  ethereum: secp256k1FromSeed,
+  vapory: secp256k1FromSeed,
   sr25519: schnorrkelFromSeed
 };
 
 const TYPE_PREFIX = {
   ecdsa: new Uint8Array([2]),
   ed25519: new Uint8Array([0]),
-  ethereum: new Uint8Array([2]),
+  vapory: new Uint8Array([2]),
   sr25519: new Uint8Array([1])
 };
 
 const TYPE_SIGNATURE = {
   ecdsa: (m: Uint8Array, p: Partial<Keypair>) => secp256k1Sign(m, p, 'blake2'),
   ed25519: naclSign,
-  ethereum: (m: Uint8Array, p: Partial<Keypair>) => secp256k1Sign(m, p, 'keccak'),
+  vapory: (m: Uint8Array, p: Partial<Keypair>) => secp256k1Sign(m, p, 'keccak'),
   sr25519: schnorrkelSign
 };
 
 const TYPE_ADDRESS = {
   ecdsa: (p: Uint8Array) => p.length > 32 ? blake2AsU8a(p) : p,
   ed25519: (p: Uint8Array) => p,
-  ethereum: (p: Uint8Array) => keccakAsU8a(secp256k1Expand(p)),
+  vapory: (p: Uint8Array) => keccakAsU8a(secp256k1Expand(p)),
   sr25519: (p: Uint8Array) => p
 };
 
@@ -114,8 +114,8 @@ export function createPair ({ toSS58, type }: Setup, { publicKey, secretKey }: P
   const encodeAddress = (): string => {
     const raw = TYPE_ADDRESS[type](publicKey);
 
-    return type === 'ethereum'
-      ? ethereumEncode(raw)
+    return type === 'vapory'
+      ? vaporyEncode(raw)
       : toSS58(raw);
   };
 
@@ -126,7 +126,7 @@ export function createPair ({ toSS58, type }: Setup, { publicKey, secretKey }: P
     get addressRaw (): Uint8Array {
       const raw = TYPE_ADDRESS[type](publicKey);
 
-      return type === 'ethereum'
+      return type === 'vapory'
         ? raw.slice(-20)
         : raw;
     },
@@ -172,7 +172,7 @@ export function createPair ({ toSS58, type }: Setup, { publicKey, secretKey }: P
       );
     },
     toJson: (passphrase?: string): KeyringPair$Json => {
-      const address = ['ecdsa', 'ethereum'].includes(type)
+      const address = ['ecdsa', 'vapory'].includes(type)
         ? u8aToHex(secp256k1Compress(publicKey))
         : encodeAddress();
 

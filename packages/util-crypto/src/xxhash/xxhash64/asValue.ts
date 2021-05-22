@@ -3,7 +3,7 @@
 
 import xx from 'xxhashjs';
 
-import { isBuffer, isString, u8aToBuffer } from '@polkadot/util';
+import { isBuffer, isString, u8aToBuffer } from '@tetcoin/util';
 
 export default function xxhash64AsValue (data: Buffer | Uint8Array | string, seed: number): number {
   if (isBuffer(data) || isString(data)) {

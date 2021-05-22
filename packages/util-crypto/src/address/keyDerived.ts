@@ -3,7 +3,7 @@
 
 import type BN from 'bn.js';
 
-import { bnToU8a, stringToU8a, u8aConcat } from '@polkadot/util';
+import { bnToU8a, stringToU8a, u8aConcat } from '@tetcoin/util';
 
 import { blake2AsU8a } from '../blake2/asU8a';
 import { decodeAddress } from './decode';

@@ -1,2 +1,2 @@
-# @polkadot/hw-ledger
+# @tetcoin/hw-ledger
 

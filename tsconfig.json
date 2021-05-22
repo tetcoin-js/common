@@ -1,5 +1,5 @@
 {
-  "extends": "@polkadot/dev/config/tsconfig.json",
+  "extends": "@tetcoin/dev/config/tsconfig.json",
   "exclude": [
     "build/**/*",
     "**/build/**/*"
@@ -7,30 +7,30 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@polkadot/hw-ledger": [ "packages/ledger/src" ],
-      "@polkadot/hw-ledger/*": [ "packages/ledger/src/*" ],
-      "@polkadot/hw-ledger-transports": [ "packages/hw-ledger-transports/src/browser" ],
-      "@polkadot/hw-ledger-transports/*": [ "packages/hw-ledger-transports/src/browser" ],
-      "@polkadot/keyring": [ "packages/keyring/src" ],
-      "@polkadot/keyring/*": [ "packages/keyring/src/*" ],
-      "@polkadot/networks": [ "packages/networks/src" ],
-      "@polkadot/networks/*": [ "packages/networks/src/*" ],
-      "@polkadot/util-crypto": [ "packages/util-crypto/src" ],
-      "@polkadot/util-crypto/*": [ "packages/util-crypto/src/*" ],
-      "@polkadot/util": [ "packages/util/src" ],
-      "@polkadot/util/*": [ "packages/util/src/*" ],
-      "@polkadot/x-fetch": [ "packages/x-fetch/src/browser" ],
-      "@polkadot/x-global": [ "packages/x-global/src" ],
-      "@polkadot/x-randomvalues": [ "packages/x-randomvalues/src/browser" ],
-      "@polkadot/x-rxjs": ["packages/x-rxjs/src"],
-      "@polkadot/x-rxjs/*": ["packages/x-rxjs/src/*"],
-      "@polkadot/x-textdecoder": [ "packages/x-textdecoder/src/browser" ],
-      "@polkadot/x-textencoder": [ "packages/x-textencoder/src/browser" ],
-      "@polkadot/x-ws": [ "packages/x-ws/src/browser" ]
+      "@tetcoin/hw-ledger": [ "packages/ledger/src" ],
+      "@tetcoin/hw-ledger/*": [ "packages/ledger/src/*" ],
+      "@tetcoin/hw-ledger-transports": [ "packages/hw-ledger-transports/src/browser" ],
+      "@tetcoin/hw-ledger-transports/*": [ "packages/hw-ledger-transports/src/browser" ],
+      "@tetcoin/keyring": [ "packages/keyring/src" ],
+      "@tetcoin/keyring/*": [ "packages/keyring/src/*" ],
+      "@tetcoin/networks": [ "packages/networks/src" ],
+      "@tetcoin/networks/*": [ "packages/networks/src/*" ],
+      "@tetcoin/util-crypto": [ "packages/util-crypto/src" ],
+      "@tetcoin/util-crypto/*": [ "packages/util-crypto/src/*" ],
+      "@tetcoin/util": [ "packages/util/src" ],
+      "@tetcoin/util/*": [ "packages/util/src/*" ],
+      "@tetcoin/x-fetch": [ "packages/x-fetch/src/browser" ],
+      "@tetcoin/x-global": [ "packages/x-global/src" ],
+      "@tetcoin/x-randomvalues": [ "packages/x-randomvalues/src/browser" ],
+      "@tetcoin/x-rxjs": ["packages/x-rxjs/src"],
+      "@tetcoin/x-rxjs/*": ["packages/x-rxjs/src/*"],
+      "@tetcoin/x-textdecoder": [ "packages/x-textdecoder/src/browser" ],
+      "@tetcoin/x-textencoder": [ "packages/x-textencoder/src/browser" ],
+      "@tetcoin/x-ws": [ "packages/x-ws/src/browser" ]
     },
     "skipLibCheck": true,
     "typeRoots": [
-      "./node_modules/@polkadot/ts",
+      "./node_modules/@tetcoin/ts",
       "./node_modules/@types"
     ]
   }

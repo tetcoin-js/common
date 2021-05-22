@@ -3,7 +3,7 @@
 
 import type { KeypairType, VerifyResult } from '../types';
 
-import { assert, u8aToU8a } from '@polkadot/util';
+import { assert, u8aToU8a } from '@tetcoin/util';
 
 import { decodeAddress } from '../address/decode';
 import { naclVerify } from '../nacl/verify';
@@ -24,7 +24,7 @@ const secp256k1VerifyHasher = (hashType: 'blake2' | 'keccak') =>
 
 const VERIFIERS_ECDSA: Verifier[] = [
   ['ecdsa', secp256k1VerifyHasher('blake2')],
-  ['ethereum', secp256k1VerifyHasher('keccak')]
+  ['vapory', secp256k1VerifyHasher('keccak')]
 ];
 
 const VERIFIERS: Verifier[] = [

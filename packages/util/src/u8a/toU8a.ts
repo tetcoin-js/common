@@ -29,7 +29,7 @@ function convertString (value: string): Uint8Array {
  * <BR>
  *
  * ```javascript
- * import { { u8aToU8a } from '@polkadot/util';
+ * import { { u8aToU8a } from '@tetcoin/util';
  *
  * u8aToU8a(new Uint8Array([0x12, 0x34]); // => Uint8Array([0x12, 0x34])
  * u8aToU8a(0x1234); // => Uint8Array([0x12, 0x34])

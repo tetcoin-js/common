@@ -5,7 +5,7 @@ import type { Keypair } from '../../types';
 
 import nacl from 'tweetnacl';
 
-import { ed25519KeypairFromSeed, isReady } from '@polkadot/wasm-crypto';
+import { ed25519KeypairFromSeed, isReady } from '@tetcoin/wasm-crypto';
 
 /**
  * @name naclKeypairFromSeed
@@ -16,7 +16,7 @@ import { ed25519KeypairFromSeed, isReady } from '@polkadot/wasm-crypto';
  * <BR>
  *
  * ```javascript
- * import { naclKeypairFromSeed } from '@polkadot/util-crypto';
+ * import { naclKeypairFromSeed } from '@tetcoin/util-crypto';
  *
  * naclKeypairFromSeed(...); // => { secretKey: [...], publicKey: [...] }
  * ```

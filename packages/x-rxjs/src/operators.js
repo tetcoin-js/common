@@ -7,7 +7,7 @@
 // Generated via s/export \{ (.*) \} from .*/exports.$1 = rxjs.$1;/ on rxjs/_esm
 
 // This is or our builder, to add the correct exports entry
-// @polkadot/dev: exports-node
+// @tetcoin/dev: exports-node
 
 const operators = require('rxjs/operators');
 

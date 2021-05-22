@@ -1,11 +1,11 @@
-# @polkadot/x-ws
+# @tetcoin/x-ws
 
 A cross-environment WebSocket.
 
-Install it via `yarn add @polkadot/x-ws`
+Install it via `yarn add @tetcoin/x-ws`
 
 ```js
-import { WebSocket } from '@polkadot/x-ws';
+import { WebSocket } from '@tetcoin/x-ws';
 
 ...
 const ws = new WebSocket('wss://example.com');

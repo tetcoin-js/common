@@ -10,7 +10,7 @@
  * <BR>
  *
  * ```javascript
- * import { stringUpperFirst } from '@polkadot/util';
+ * import { stringUpperFirst } from '@tetcoin/util';
  *
  * stringUpperFirst('abc'); // => 'Abc'
  * ```

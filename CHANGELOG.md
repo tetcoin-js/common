@@ -7,7 +7,7 @@
 Changes:
 
 - The signature on the keyring for `.verify` now explicitly requires the `publicKey` of the signer. Previously it only verified against an own public key.
-- Add additional ss58 test vectors (against chains with >63 prefixes in the Substrate registry)
+- Add additional ss58 test vectors (against chains with >63 prefixes in the Tetcore registry)
 
 
 ## 5.6.3 Feb 16, 2021
@@ -21,21 +21,21 @@ Changes:
 - Add `unlock(password)` to keypair (less confusing than only having `decodePkcs8`, equivalent to `lock()`)
 - Change use of `detectPackage` to use `packageInfo.ts`
 - Align with upstream ss58 registry
-- `@polkadot/wasm-crypto` 3.2.3
+- `@tetcoin/wasm-crypto` 3.2.3
 
 
 ## 5.6.2 Feb 8, 2021
 
 Changes:
 
-- `@polkadot/networks` now filters the new upstream-introduced `null` networks
+- `@tetcoin/networks` now filters the new upstream-introduced `null` networks
 
 
 ## 5.6.1 Feb 7, 2021
 
 Contributed:
 
-- Fix installation instructions in `@polkadot/x-global` (Thanks to https://github.com/raoulmillais)
+- Fix installation instructions in `@tetcoin/x-global` (Thanks to https://github.com/raoulmillais)
 
 Changes:
 
@@ -43,7 +43,7 @@ Changes:
 - Use JS sqrt inside `bnSqrt` when value <= MAX_SAFE_INTEGER
 - Adjust all `Buffer.from` usages, prefer `Uint8Array` where possible
 - Expand tests for keyring with `vrf{Sign, Verify}`
-- Align `@polkadot/networks` with latest ss58 registry
+- Align `@tetcoin/networks` with latest ss58 registry
 
 
 ## 5.5.2 Feb 2, 2021
@@ -59,9 +59,9 @@ Changes:
 
 - Added `hdLedger` to util-crypto for Ledger-compatible bip32+ed25519 derivation
 - Added `hmac{Sha256, 512}` to util-crypto
-- Add `slip44` indices for Ledger into `@polkadot/networks`
+- Add `slip44` indices for Ledger into `@tetcoin/networks`
 - Remove `module` entry in `package.json` (only rely on exports map)
-- Remove direct references to `global` object, use `@polkadot/x-global`
+- Remove direct references to `global` object, use `@tetcoin/x-global`
 - Update `@ledgerhq` dependencies to latest
 
 
@@ -74,17 +74,17 @@ Contributed:
 Changes:
 
 - Allow decimals as `number[]` & symbol as `string[]` in balanceFormat defaults
-- Add `schnorrkelVrf{Sign, Verify}` to `@polkadot/util-crypto`
+- Add `schnorrkelVrf{Sign, Verify}` to `@tetcoin/util-crypto`
 - Export `vrf{Sign, Verify}` on keyring interface
-- Move `@polkadot/x-rxjs` packages from the api repo
-- Align `@polkadot/networks` with Substrate master
+- Move `@tetcoin/x-rxjs` packages from the api repo
+- Align `@tetcoin/networks` with Tetcore master
 - Explicit edcsa tests for derivation
-- `@polkadot/wasm-crypto` 3.2.1
+- `@tetcoin/wasm-crypto` 3.2.1
 
 
 ## 5.3.1 Jan 17, 2021
 
-**Important** For users of the `@polkadot/ledger` package, it is now included in this repo (since it is a general utility) and renamed to `@polkadot/hw-ledger`
+**Important** For users of the `@tetcoin/ledger` package, it is now included in this repo (since it is a general utility) and renamed to `@tetcoin/hw-ledger`
 
 Contributed:
 
@@ -94,8 +94,8 @@ Contributed:
 
 Changes:
 
-- Move `@polkadot/ledger` packages into common
-- Update `@polkadot/networks` to align with latest Substrate ss58-registry
+- Move `@tetcoin/ledger` packages into common
+- Update `@tetcoin/networks` to align with latest Tetcore ss58-registry
 
 
 ## 5.2.1 Dec 27, 2020
@@ -105,7 +105,7 @@ Changes:
 - Add `arrayFlatten` to merge a series of arrays into a single
 - Add `arrayChunk` to chunk an array into multiples of defined size
 - Add `bitLength` param (allowed 256, 512) to `keccakAs{Hex, U8a}`
-- Align `@polkadot/networks` with Substrate master
+- Align `@tetcoin/networks` with Tetcore master
 
 
 ## 5.1.1 Dec 19, 2020
@@ -115,8 +115,8 @@ Changes:
 - `detectPackage` now can take a path-retrieval callback as second argument
 - Adjust `blake2js` imports to consistently cater for esm & cjs usage
 - Explicitly mark `detectPackage` usage as having side-effects
-- Align `@polkadot/networks` with Substrate master
-- `@polkadot/wasm-crypto` 3.1.1
+- Align `@tetcoin/networks` with Tetcore master
+- `@tetcoin/wasm-crypto` 3.1.1
 
 
 ## 5.0.1 Dec 13, 2020
@@ -127,12 +127,12 @@ Changes:
 
 - Build and expose both cjs and esm via exports map
 - Use `import type { ... }` form for all type imports
-- Align with Substrate master network list
+- Align with Tetcore master network list
 - Debug logs now don't depend on `NODE_ENV`, but rather `DEBUG=<type,type,...>` (`*` logs all)
 - Limit debug console output via `DEBUG_MAX=<number>` value, trimming when passed
 - Add `memoize` util, allowing for function memoization (as used in the API)
-- Align `@polkadot/networks` with Substrate master
-- `@polkadot/wasm-crypto` 3.0.1
+- Align `@tetcoin/networks` with Tetcore master
+- `@tetcoin/wasm-crypto` 3.0.1
 
 
 ## 4.2.1 Nov 23, 2020
@@ -141,7 +141,7 @@ Changes:
 
 - Rename default Mega to Million, Giga to Billion and Tera to Trillion in formatter
 - Dedupe bn.js by aligning versions between different libraries
-- Add explicit link to base Substrate ss58 formats (as managed in `@polkadot/util`)
+- Add explicit link to base Tetcore ss58 formats (as managed in `@tetcoin/util`)
 
 
 ## 4.1.1 Nov 16, 2020
@@ -164,9 +164,9 @@ Changes:
 Changes:
 
 - Remove built-in utility polyfills for `Array.fill`, `String.padStart`, `String.padEnd` as well as `Object.setPrototypeOf`. These should be provided by the actual user of the libraries if so required.
-- Update `@polkadot/wasm-crypto` library (under-the-hood cleanups)
-- Remove explicit crypto polyfill injection (aligning with updated `@polkadot/wasm-crypto`)
-- Add cross-environment `@polkadot/x-randomvalues` (for use in `@polkadot/wasm-crypto`)
+- Update `@tetcoin/wasm-crypto` library (under-the-hood cleanups)
+- Remove explicit crypto polyfill injection (aligning with updated `@tetcoin/wasm-crypto`)
+- Add cross-environment `@tetcoin/x-randomvalues` (for use in `@tetcoin/wasm-crypto`)
 
 
 ## 3.7.1 Nov 1, 2020
@@ -177,23 +177,23 @@ Changes:
 - `string*` utilities now also allows `String` (class) inputs
 - Align bip39 use with wasm-crypto for English-only wordlist, default, non supplied)
 - Adjust elliptic imports for explicit paths (allows tree-shaking)
-- Add Totem (ss58 prefix 14) into `@polkadot/networks`
-- Move `@polkadot/x-{fetch,textdecoder,textencoder,ws}` into `common` repo
+- Add Totem (ss58 prefix 14) into `@tetcoin/networks`
+- Move `@tetcoin/x-{fetch,textdecoder,textencoder,ws}` into `common` repo
 
 
 ## 3.6.1 Oct 18, 2020
 
 Contributed:
 
-- Add evmToAddress and addressToEvm `@polkadot/util-crypto` (Thanks to https://github.com/jnaviask)
+- Add evmToAddress and addressToEvm `@tetcoin/util-crypto` (Thanks to https://github.com/jnaviask)
 - Remove invalid link to docs (thanks to https://github.com/roccomuso)
 
 Changes:
 
-- Rename `mnemonicToBip39` to `mnemonicToLegacySeed` (used in non-Substrate compatible fashion)
+- Rename `mnemonicToBip39` to `mnemonicToLegacySeed` (used in non-Tetcore compatible fashion)
 - Update pair signature verification to handle MultiSignature results
 - Move documentation to docs repo
-- Added `@polkadot/networks` for a list of known networks and their identifying information
+- Added `@tetcoin/networks` for a list of known networks and their identifying information
 
 
 ## 3.5.1 Sep 27, 2020
@@ -204,8 +204,8 @@ Contributed:
 
 Changes:
 
-- Use cross-environment TextDecoder & TextEncoder from the polkadot-js polyfills
-- Add `isBase{32, 58, 64}` to `@polkadot/util-crypto`
+- Use cross-environment TextDecoder & TextEncoder from the tetcoinjs polyfills
+- Add `isBase{32, 58, 64}` to `@tetcoin/util-crypto`
 - Add `base64{Pad, Trim}` to add/remove padding characters
 - Add `createFromJson(json)` to keyring (create pair without adding)
 - Balance formatter now outputs 4 numbers after the decimal point
@@ -215,9 +215,9 @@ Changes:
 
 Changes:
 
-- Allow for WASM-as-available `mnemonicToBip39` call (used for Ethereum-compatible keypairs)
+- Allow for WASM-as-available `mnemonicToBip39` call (used for Vapory-compatible keypairs)
 - Add `isWasm` utility to check for valid WASM headers
-- `@polkadot/wasm-crypto` 1.4.1
+- `@tetcoin/wasm-crypto` 1.4.1
 
 
 ## 3.3.1 Aug 24, 2020
@@ -225,7 +225,7 @@ Changes:
 Changes:
 
 - Add `addressRaw` to Keyring interface (if address encoding is different to publicKey)
-- Allow for Ethereum pair signing and verification
+- Allow for Vapory pair signing and verification
 
 
 ## 3.2.1 Aug 17, 2020
@@ -234,8 +234,8 @@ Changes:
 
 - Allow for (optional, default blake2) hasher to secp256k1 sign/verify functions
 - Utilities for secp256k1 publicKey expansion and compression
-- Add basic Ethereum address utils (encode with checksum & checksum verification)
-- Add Ethereum-compatible `mnemonicToBip39` seed creation function
+- Add basic Vapory address utils (encode with checksum & checksum verification)
+- Add Vapory-compatible `mnemonicToBip39` seed creation function
 
 
 ## 3.1.1 Aug 10, 2020
@@ -246,7 +246,7 @@ Changes:
 - Use `scrypt` from WASM as available (JS fallback in place)
 - Add `base32{Encode, Decode}` utilities (IPFS-compatible alphabet)
 - Support IPFS compatibility flag in base58 encoding/decoding
-- Update to `@polkadot/wasm-crypto` 1.3.1
+- Update to `@tetcoin/wasm-crypto` 1.3.1
 
 
 ## 3.0.1 Jul 27, 2020
@@ -284,14 +284,14 @@ Changes:
 Changes:
 
 - Adjust `addressCheck` and `encodeAddress` function to check for valid base58 alphabets (better error reporting)
-- Rename `createKeySub` to `createKeyDerived` based on changed in Substrate (sub keys now named derived)
+- Rename `createKeySub` to `createKeyDerived` based on changed in Tetcore (sub keys now named derived)
 
 
 ## 2.15.1 Jun 22, 2020
 
 Changes:
 
-- Adjust keyring to no override 0-prefix (Polkadot live) settings with keychain default
+- Adjust keyring to no override 0-prefix (Tetcoin live) settings with keychain default
 
 
 ## 2.14.1 Jun 16, 2020
@@ -319,7 +319,7 @@ Changes:
 
 ## 2.12.1 Jun 1, 2020
 
-- **Important** Removed `mnemonicToSeed`, it is only for bip39, use `mnemonicToMiniSecret` for the Substrate variant
+- **Important** Removed `mnemonicToSeed`, it is only for bip39, use `mnemonicToMiniSecret` for the Tetcore variant
 
 Changes:
 
@@ -377,13 +377,13 @@ Changes:
 Changes:
 
 - Add `bnSqrt` to calculate the integer sqrt via Newton iteration
-- Allow for optional wasm-crypto, specifically via `@polkadot/util-crypto/noWasm`
+- Allow for optional wasm-crypto, specifically via `@tetcoin/util-crypto/noWasm`
 - Misc. CI infrastructure cleanups
 
 
 ## 2.6.1 Feb 29, 2020
 
-- **Breaking change** Following on the 2.0 release, `@polkadot/wasm` was updated to 1.1+. sr25510 now only verifies 0.8+ signatures, closing the loop on dropping Substrate 1.x-era support
+- **Breaking change** Following on the 2.0 release, `@tetcoin/wasm` was updated to 1.1+. sr25510 now only verifies 0.8+ signatures, closing the loop on dropping Tetcore 1.x-era support
 
 Changes:
 
@@ -411,7 +411,7 @@ Changes:
 - Ensure that `formatBalance` does not apply unit overrides apply when no SI is applicable
 - Adjust `formatBalance(<balance>, <options>)` to take expanded `withUnit: string | boolean` option where string is an actual unit, e.g. `KSM`
 - The `decimals` option to `formatBalance` should now be passed as part of the `options` (previous last-param deprecated)
-- The `.setSS58Format` on keyring will now just operate on pairs created on the keyring, not globally. The global `setSS58Format` in `@polkadot/util-crypto` will be deprecated.
+- The `.setSS58Format` on keyring will now just operate on pairs created on the keyring, not globally. The global `setSS58Format` in `@tetcoin/util-crypto` will be deprecated.
 - The deprecated `addressPrefix` option to keyring has been belatedly removed (Use `ss58Format` rather)
 
 
@@ -424,7 +424,7 @@ Contributed:
 
 Changes:
 
-- Update to `@polkadot/wasm-crypto` 1.0
+- Update to `@tetcoin/wasm-crypto` 1.0
 - Cleanup dependencies to pave the way for using yarn 2 (Explicit instead of implicit)
 
 
@@ -446,8 +446,8 @@ Changes:
 
 Changes:
 
-- Update w3f/schnorrkel to 0.8.5 (Full Substrate 2.x support, no 1.x support)
-- Remove Alice session (ed2551) account from testing keyring (not applicable to Substrate 2.x)
+- Update w3f/schnorrkel to 0.8.5 (Full Tetcore 2.x support, no 1.x support)
+- Remove Alice session (ed2551) account from testing keyring (not applicable to Tetcore 2.x)
 - Remove `chainspec`, `db`, `trie-codec`, `trie-db` and `trie-hash` packages (moved to client)
 - Renamed `assertSingletonPackage` to `detectPackage` with inclusion of version listing
 - Swap to elliptic library for secp2561 recovery (No node bindings)
@@ -473,7 +473,7 @@ Changes:
 
 Changes:
 
-- `pair.sign(message)` now takes an optional second `options?: SignOptions` parameter, where `SignOptions` is currently defined as `{ withType: boolean }`. Here `withType` instructs the signing to prepend the type of signature (ed2551, sr25519 or ecdsa). This is used for the new Polkadot/Substrate MultiSignature format.
+- `pair.sign(message)` now takes an optional second `options?: SignOptions` parameter, where `SignOptions` is currently defined as `{ withType: boolean }`. Here `withType` instructs the signing to prepend the type of signature (ed2551, sr25519 or ecdsa). This is used for the new Tetcoin/Tetcore MultiSignature format.
 
 
 ## 1.5.1 Sep 25, 2019
@@ -493,7 +493,7 @@ Changes:
 
 - Renamed `keyring.setAddressPrefix` to `keyring.setSS58Format`
 - Deprecated `addressPrefix` on the keyring options, added the `ss58Format` as a replacement (aligning with chain properties - the old version is still accepted)
-- Added `stringToHex` and `hexToString` conversion utilities to `@polkadot/util`
+- Added `stringToHex` and `hexToString` conversion utilities to `@tetcoin/util`
 - Swap to [Babel 7.6.0](https://babeljs.io/) for all compilation, for latest improvements in code generation
 
 
@@ -530,9 +530,9 @@ Changes:
 ## 0.94.1 Jul 20, 2019
 Changes:
 
-- Add `checkAddress(address, prefix)` to `@polkadot/util-crypto` that validates an ss-58 address
+- Add `checkAddress(address, prefix)` to `@tetcoin/util-crypto` that validates an ss-58 address
 - Add support for the Kusama network (as a valid checked prefix)
-- Add an `asm.js` fallback for the React Native environment (via `@polkadot/wasm-crypto`)
+- Add an `asm.js` fallback for the React Native environment (via `@tetcoin/wasm-crypto`)
 - The ed25519 key for Alice (representing the session), now appears in the test keyrings
 - Fix missing dependencies for keyring (after address moves in 0.93.1)
 
@@ -545,7 +545,7 @@ Changes:
   - `getMeta` use the `meta` getter, i.e. `console.log(pair.meta.name)`
   - `address` use the `address` getter, i.e. `console.log(pair.address)`
   - `publicKey` use the `publicKey` getter, i.e. `console.log(pair.publicKey)`
-- `Move decodeAddress`, `encodeAddress` & `setAddressPrefix` functions into `@polkadot/util-crypto` from `@polkadot/keyring`. External interfaces should not be affected at this point since it is also (still) exported and exposed on keyring
+- `Move decodeAddress`, `encodeAddress` & `setAddressPrefix` functions into `@tetcoin/util-crypto` from `@tetcoin/keyring`. External interfaces should not be affected at this point since it is also (still) exported and exposed on keyring
 
 
 ## 0.92.1 Jun 04, 2019
@@ -562,7 +562,7 @@ Changes:
 Changes:
 
 - ed25519/sr25519 sign & verify functions can now take the message input as Uint8Array/string/hex and verify allows for the signature/publicKey to be specified as Uint8Array/hex
-- Update `@polkadot/wasm` to include a maintenance bump for the `w3f/schnorrkel` libraries
+- Update `@tetcoin/wasm` to include a maintenance bump for the `w3f/schnorrkel` libraries
 
 
 ## 0.90.1 May 08, 2019
@@ -578,7 +578,7 @@ Changes:
 Changes:
 
 - Fix `addFromMnemonic` to generate using new-style derivation.
-- Pull in `formatBalance`, `formatDecimal`, `formatElapsed`, `formatNumber`, `calcSi`, `findSi` & `isTestChain` utility functions from the originals in `@polkadot/ui-util`
+- Pull in `formatBalance`, `formatDecimal`, `formatElapsed`, `formatNumber`, `calcSi`, `findSi` & `isTestChain` utility functions from the originals in `@tetcoin/ui-util`
 - Swap out `wasm-schnorrkel` & `wasm-ed25519` for combined version with `wasm-crypto`
 - Swap DB interfaces to optional LRU, removing `transactionAsync` (client-only changes)
 
@@ -625,7 +625,7 @@ Changes:
 
 Changes:
 
-- Align with current substrate master for sr25519 keys and hard/soft derivation
+- Align with current tetcore master for sr25519 keys and hard/soft derivation
 - Swap default dev keys to derived (sr25519)
 
 

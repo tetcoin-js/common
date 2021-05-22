@@ -3,7 +3,7 @@
 
 import type { Prefix } from './types';
 
-import { u8aSorted } from '@polkadot/util';
+import { u8aSorted } from '@tetcoin/util';
 
 import { decodeAddress } from './decode';
 import { encodeAddress } from './encode';

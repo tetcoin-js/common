@@ -1,5 +1,5 @@
 {
-  "name": "@polkadot/x-rxjs",
+  "name": "@tetcoin/x-rxjs",
   "version": "5.7.1",
   "description": "A pass-through interface for RxJs (allowing node + mjs usage)",
   "main": "index.js",
@@ -8,9 +8,9 @@
   "maintainers": [],
   "contributors": [],
   "license": "Apache-2.0",
-  "repository": "github:polkadot-js/common",
-  "bugs": "https://github.com/polkadot-js/common/issues",
-  "homepage": "https://github.com/polkadot-js/common/tree/master/packages/x-rxjs#readme",
+  "repository": "github:tetcoinjs/common",
+  "bugs": "https://github.com/tetcoinjs/common/issues",
+  "homepage": "https://github.com/tetcoinjs/common/tree/master/packages/x-rxjs#readme",
   "dependencies": {
     "@babel/runtime": "^7.12.13",
     "rxjs": "^6.6.3"

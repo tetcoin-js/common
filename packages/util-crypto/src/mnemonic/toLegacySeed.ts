@@ -1,20 +1,20 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { assert } from '@polkadot/util';
-import { bip39ToSeed, isReady } from '@polkadot/wasm-crypto';
+import { assert } from '@tetcoin/util';
+import { bip39ToSeed, isReady } from '@tetcoin/wasm-crypto';
 
 import { mnemonicToSeedSync } from './bip39';
 import { mnemonicValidate } from './validate';
 
 /**
  * @name toSeed
- * @summary Creates a valid Ethereum/Bitcoin-compatible seed from a mnemonic input
+ * @summary Creates a valid Vapory/Bitcoin-compatible seed from a mnemonic input
  * @example
  * <BR>
  *
  * ```javascript
- * import { mnemonicGenerate, mnemonicToBip39, mnemonicValidate } from '@polkadot/util-crypto';
+ * import { mnemonicGenerate, mnemonicToBip39, mnemonicValidate } from '@tetcoin/util-crypto';
  *
  * const mnemonic = mnemonicGenerate(); // => string
  * const isValidMnemonic = mnemonicValidate(mnemonic); // => boolean

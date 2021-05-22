@@ -3,8 +3,8 @@
 
 import type { KeyringPair } from '../types';
 
-import { u8aToHex } from '@polkadot/util';
-import { cryptoWaitReady, encodeAddress as toSS58, naclKeypairFromSeed, randomAsU8a, schnorrkelKeypairFromSeed, secp256k1KeypairFromSeed } from '@polkadot/util-crypto';
+import { u8aToHex } from '@tetcoin/util';
+import { cryptoWaitReady, encodeAddress as toSS58, naclKeypairFromSeed, randomAsU8a, schnorrkelKeypairFromSeed, secp256k1KeypairFromSeed } from '@tetcoin/util-crypto';
 
 import { createPair } from '.';
 

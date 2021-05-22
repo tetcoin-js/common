@@ -9,7 +9,7 @@ describe('secp256k1Verify', (): void => {
 
     expect(
       secp256k1Verify(
-        `\x19Ethereum Signed Message:\n${message.length.toString()}${message}`,
+        `\x19Vapory Signed Message:\n${message.length.toString()}${message}`,
         '0x55bd020bdbbdc02de34e915effc9b18a99002f4c29f64e22e8dcbb69e722ea6c28e1bb53b9484063fbbfd205e49dcc1f620929f520c9c4c3695150f05a28f52a01',
         '0x002309df96687e44280bb72c3818358faeeb699c',
         'keccak'

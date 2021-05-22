@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { u8aToHex } from '@polkadot/util';
+import { u8aToHex } from '@tetcoin/util';
 
 import { hdLedger } from '..';
 
@@ -29,7 +29,7 @@ const TESTS = {
       }
     ]
   },
-  Polkadot: {
+  Tetcoin: {
     slip44: 0x80000162,
     tests: [
       {

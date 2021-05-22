@@ -14,7 +14,7 @@ import { isUndefined } from '../is/undefined';
  * <BR>
  *
  * ```javascript
- * import { numberToHex } from '@polkadot/util';
+ * import { numberToHex } from '@tetcoin/util';
  *
  * numberToHex(0x1234); // => '0x1234'
  * numberToHex(0x1234, 32); // => 0x00001234

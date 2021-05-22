@@ -4,7 +4,7 @@
 import type { HashType } from '../secp256k1/types';
 import type { Prefix } from './types';
 
-import { u8aConcat } from '@polkadot/util';
+import { u8aConcat } from '@tetcoin/util';
 
 import { secp256k1Hasher } from '../secp256k1/hasher';
 import { encodeAddress } from './encode';

@@ -28,7 +28,7 @@ function numberToBn <ExtToBn extends ToBn> (value: number | ExtToBn | BN): BN {
  *
  * ```javascript
  * import BN from 'bn.js';
- * import { bnToBn } from '@polkadot/util';
+ * import { bnToBn } from '@tetcoin/util';
  *
  * bnToBn(0x1234); // => BN(0x1234)
  * bnToBn(new BN(0x1234)); // => BN(0x1234)

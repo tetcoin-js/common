@@ -7,7 +7,7 @@
 
 import { NativeModules } from 'react-native';
 
-import { xglobal } from '@polkadot/x-global';
+import { xglobal } from '@tetcoin/x-global';
 
 import { insecureRandomValues } from './fallback';
 

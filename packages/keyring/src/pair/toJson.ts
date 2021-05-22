@@ -1,10 +1,10 @@
 // Copyright 2017-2021 @polkadot/keyring authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { KeypairType } from '@polkadot/util-crypto/types';
+import type { KeypairType } from '@tetcoin/util-crypto/types';
 import type { KeyringPair$Json, KeyringPair$JsonEncodingTypes, KeyringPair$Meta } from '../types';
 
-import { base64Encode } from '@polkadot/util-crypto';
+import { base64Encode } from '@tetcoin/util-crypto';
 
 import { ENCODING } from './defaults';
 

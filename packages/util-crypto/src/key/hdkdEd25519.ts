@@ -3,7 +3,7 @@
 
 import type { Keypair } from '../types';
 
-import { assert } from '@polkadot/util';
+import { assert } from '@tetcoin/util';
 
 import { naclDeriveHard } from '../nacl/deriveHard';
 import { naclKeypairFromSeed } from '../nacl/keypair/fromSeed';

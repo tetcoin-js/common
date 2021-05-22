@@ -3,7 +3,7 @@
 
 import type { Keypair } from '../types';
 
-import { sr25519DeriveKeypairSoft } from '@polkadot/wasm-crypto';
+import { sr25519DeriveKeypairSoft } from '@tetcoin/wasm-crypto';
 
 import { schnorrkelKeypairFromU8a } from './keypair/fromU8a';
 import { schnorrkelKeypairToU8a } from './keypair/toU8a';

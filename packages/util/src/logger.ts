@@ -94,7 +94,7 @@ function parseEnv (type: string): [boolean, number] {
  * <BR>
  *
  * ```javascript
- * import { logger } from '@polkadot';
+ * import { logger } from '@tetcoin';
  *
  * const l = logger('test');
  * ```

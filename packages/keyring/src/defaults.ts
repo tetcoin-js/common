@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @polkadot/keyring authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-// default substrate dev phrase
+// default tetcore dev phrase
 const DEV_PHRASE = 'bottom drive obey lake curtain smoke basket hold race lonely fit walk';
 
 // seed from the above phrase

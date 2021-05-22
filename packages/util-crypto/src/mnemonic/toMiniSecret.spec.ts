@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { u8aEq, u8aToHex } from '@polkadot/util';
+import { u8aEq, u8aToHex } from '@tetcoin/util';
 
 import tests from '../schnorrkel/keypair/testing';
 import { cryptoWaitReady } from '..';
@@ -38,7 +38,7 @@ describe('mnemonicToMiniSecret', (): void => {
     [false, true].forEach((onlyJs): void => {
       it(`Created correct seed for ${index} (onlyJs = ${onlyJs.toString()})`, (): void => {
         expect(
-          u8aToHex(mnemonicToMiniSecret(mnemonic, 'Substrate', onlyJs))
+          u8aToHex(mnemonicToMiniSecret(mnemonic, 'Tetcore', onlyJs))
         ).toEqual(
           // mini returned here, only check first 32-bytes (64 hex + 2 prefix)
           seed.substr(0, 66)

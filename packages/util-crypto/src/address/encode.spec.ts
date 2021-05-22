@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { createTestPairs } from '@polkadot/keyring/testingPairs';
+import { createTestPairs } from '@tetcoin/keyring/testingPairs';
 
 import { encodeAddress } from '.';
 
@@ -9,7 +9,7 @@ const keyring = createTestPairs({ type: 'ed25519' }, false);
 
 const SUBKEY = [
   {
-    // substrate default
+    // tetcore default
     address: '5DA4D4GL5iakrn22h5uKoevgvo18Pqj5BcdEUv8etEDPdijA',
     publicKey: '0x3050f8456519829fe03302da802d22d3233a5f4037b9a3e2bcc403ccfcb2d735',
     ss58Format: 42
@@ -67,7 +67,7 @@ describe('encode', (): void => {
     ).toEqual('HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F');
   });
 
-  it('can re-encode an address to Polkadot live', (): void => {
+  it('can re-encode an address to Tetcoin live', (): void => {
     expect(
       encodeAddress('5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY', 0)
     ).toEqual('15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5');

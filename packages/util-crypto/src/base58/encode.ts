@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { u8aToBuffer, u8aToU8a } from '@polkadot/util';
+import { u8aToBuffer, u8aToU8a } from '@tetcoin/util';
 
 import { bs58 } from './bs58';
 

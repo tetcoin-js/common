@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { bip39Validate, isReady } from '@polkadot/wasm-crypto';
+import { bip39Validate, isReady } from '@tetcoin/wasm-crypto';
 
 import { validateMnemonic } from './bip39';
 
@@ -12,7 +12,7 @@ import { validateMnemonic } from './bip39';
  * <BR>
  *
  * ```javascript
- * import { mnemonicGenerate, mnemonicValidate } from '@polkadot/util-crypto';
+ * import { mnemonicGenerate, mnemonicValidate } from '@tetcoin/util-crypto';
  *
  * const mnemonic = mnemonicGenerate(); // => string
  * const isValidMnemonic = mnemonicValidate(mnemonic); // => boolean

@@ -3,7 +3,7 @@
 
 import type BN from 'bn.js';
 
-import { bnToHex, compactAddLength, hexToU8a, isBigInt, isBn, isHex, isNumber, isString, stringToU8a } from '@polkadot/util';
+import { bnToHex, compactAddLength, hexToU8a, isBigInt, isBn, isHex, isNumber, isString, stringToU8a } from '@tetcoin/util';
 
 import { blake2AsU8a } from '../blake2/asU8a';
 

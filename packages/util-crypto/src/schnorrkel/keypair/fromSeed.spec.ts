@@ -1,8 +1,8 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { stringToU8a, u8aToHex } from '@polkadot/util';
-import { waitReady } from '@polkadot/wasm-crypto';
+import { stringToU8a, u8aToHex } from '@tetcoin/util';
+import { waitReady } from '@tetcoin/wasm-crypto';
 
 import { mnemonicToMiniSecret } from '../../mnemonic';
 import { schnorrkelKeypairFromSeed } from '..';
@@ -27,7 +27,7 @@ describe('schnorrkelKeypairFromSeed', (): void => {
 
   tests.forEach(([mnemonic, , , secret], index): void => {
     it(`creates valid against known (${index})`, (): void => {
-      const seed = mnemonicToMiniSecret(mnemonic, 'Substrate');
+      const seed = mnemonicToMiniSecret(mnemonic, 'Tetcore');
       const pair = schnorrkelKeypairFromSeed(seed);
 
       expect(

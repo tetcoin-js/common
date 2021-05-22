@@ -1,13 +1,13 @@
-[![polkadotjs](https://img.shields.io/badge/polkadot-js-orange?logo=&style=flat-square)](https://polkadot.js.org)
+[![tetcoinjs](https://img.shields.io/badge/tetcoinjs-orange?logo=&style=flat-square)](https://js.tetcoin.org)
 ![license](https://img.shields.io/badge/License-Apache%202.0-blue?logo=apache&style=flat-square)
-[![npm](https://img.shields.io/npm/v/@polkadot/util?logo=npm&style=flat-square)](https://www.npmjs.com/package/@polkadot/util)
-[![beta](https://img.shields.io/npm/v/@polkadot/util/beta?label=beta&logo=npm&style=flat-square)](https://www.npmjs.com/package/@polkadot/util)
-[![maintainability](https://img.shields.io/codeclimate/maintainability-percentage/polkadot-js/common?logo=code-climate&style=flat-square)](https://codeclimate.com/github/polkadot-js/common)
-[![coverage](https://img.shields.io/codeclimate/coverage/polkadot-js/common?logo=code-climate&style=flat-square)](https://codeclimate.com/github/polkadot-js/common)
+[![npm](https://img.shields.io/npm/v/@tetcoin/util?logo=npm&style=flat-square)](https://www.npmjs.com/package/@tetcoin/util)
+[![beta](https://img.shields.io/npm/v/@tetcoin/util/beta?label=beta&logo=npm&style=flat-square)](https://www.npmjs.com/package/@tetcoin/util)
+[![maintainability](https://img.shields.io/codeclimate/maintainability-percentage/tetcoinjs/common?logo=code-climate&style=flat-square)](https://codeclimate.com/github/tetcoinjs/common)
+[![coverage](https://img.shields.io/codeclimate/coverage/tetcoinjs/common?logo=code-climate&style=flat-square)](https://codeclimate.com/github/tetcoinjs/common)
 
-# @polkadot/common
+# @tetcoin/common
 
-Various useful utility functions that are used across all projects in the [@polkadot](https://polkadot.js.org) namespace. It provides utility functions with additional safety checks, allowing not only for consistent coding, but also reducing the general boilerplate.
+Various useful utility functions that are used across all projects in the [@tetcoin](https://js.tetcoin.org) namespace. It provides utility functions with additional safety checks, allowing not only for consistent coding, but also reducing the general boilerplate.
 
 ## overview
 
@@ -21,11 +21,11 @@ This repository is split up into a number of internal packages, namely utilities
 
 Contributions are welcome!
 
-To start off, this repo (along with others in the [@polkadot](https://github.com/polkadot-js/) family) uses yarn workspaces to organise the code. As such, after cloning, its dependencies _should_ be installed via `yarn`, not via npm; the latter will result in broken dependencies.
+To start off, this repo (along with others in the [@tetcoin](https://github.com/tetcoinjs/) family) uses yarn workspaces to organise the code. As such, after cloning, its dependencies _should_ be installed via `yarn`, not via npm; the latter will result in broken dependencies.
 
 To get started -
 
-1. Clone the repo locally, via `git clone https://github.com/polkadot-js/common <optional local path>`
+1. Clone the repo locally, via `git clone https://github.com/tetcoinjs/common <optional local path>`
 2. Ensure that you have a recent version of Node.js, for development purposes [Node 10](https://nodejs.org/en/) is recommended.
 3. Ensure that you have a recent version of Yarn, for development purposes [Yarn >=1.10.1](https://yarnpkg.com/docs/install) is required.
 4. Install the dependencies by running `yarn`
@@ -35,4 +35,4 @@ To get started -
 
 ## tutorials
 
-Looking for tutorials to get started? Look at [examples](https://polkadot.js.org/api/examples/keyring/) for guides on how to use the base utilities.
+Looking for tutorials to get started? Look at [examples](https://js.tetcoin.org/api/examples/keyring/) for guides on how to use the base utilities.

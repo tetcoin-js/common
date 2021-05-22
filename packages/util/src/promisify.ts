@@ -10,7 +10,7 @@
  * <BR>
  *
  * ```javascript
- * const { promisify } from '@polkadot/util';
+ * const { promisify } from '@tetcoin/util';
  *
  * await promisify(null, ((a, cb) => cb(null, a), true); // resolves with `true`
  * await promisify(null, (cb) => cb(new Error('error!'))); // rejects with `error!`

@@ -4,10 +4,10 @@
 import type Transport from '@ledgerhq/hw-transport';
 import type { AccountOptions, LedgerAddress, LedgerSignature, LedgerTypes, LedgerVersion } from './types';
 
-import { newDockApp, newKusamaApp, newPolkadotApp, newPolymeshApp, ResponseBase, SubstrateApp } from '@zondax/ledger-polkadot';
+import { newDockApp, newKusamaApp, newTetcoinApp, newPolymeshApp, ResponseBase, TetcoreApp } from '@zondax/ledger-tetcoin';
 
-import { transports } from '@polkadot/hw-ledger-transports';
-import { assert, bufferToU8a, u8aToBuffer, u8aToHex } from '@polkadot/util';
+import { transports } from '@tetcoin/hw-ledger-transports';
+import { assert, bufferToU8a, u8aToBuffer, u8aToHex } from '@tetcoin/util';
 
 export const LEDGER_DEFAULT_ACCOUNT = 0x80000000;
 
@@ -17,13 +17,13 @@ export const LEDGER_DEFAULT_INDEX = 0x80000000;
 
 const SUCCESS_CODE = 0x9000;
 
-// These match up with the network keys in the @polkadot/networks package
-// (which is turn aligns with the substrate/ss58-registry.json as the single
+// These match up with the network keys in the @tetcoin/networks package
+// (which is turn aligns with the tetcore/ss58-registry.json as the single
 // source of truth)
-const APPS: Record<string, (transport: Transport) => SubstrateApp> = {
+const APPS: Record<string, (transport: Transport) => TetcoreApp> = {
   dock: newDockApp,
   kusama: newKusamaApp,
-  polkadot: newPolkadotApp,
+  tetcoin: newTetcoinApp,
   polymesh: newPolymeshApp
 };
 
@@ -33,7 +33,7 @@ type Chain = keyof typeof APPS;
 //  - it connects automatically, creating an app as required
 //  - Promises return errors (instead of wrapper errors)
 export class Ledger {
-  #app: SubstrateApp | null = null;
+  #app: TetcoreApp | null = null;
 
   #chain: Chain;
 
@@ -49,7 +49,7 @@ export class Ledger {
   }
 
   public async getAddress (confirm = false, accountOffset = 0, addressOffset = 0, { account = LEDGER_DEFAULT_ACCOUNT, addressIndex = LEDGER_DEFAULT_INDEX, change = LEDGER_DEFAULT_CHANGE }: Partial<AccountOptions> = {}): Promise<LedgerAddress> {
-    return this.#withApp(async (app: SubstrateApp): Promise<LedgerAddress> => {
+    return this.#withApp(async (app: TetcoreApp): Promise<LedgerAddress> => {
       const { address, pubKey } = await this.#wrapError(app.getAddress(account + accountOffset, change, addressIndex + addressOffset, confirm));
 
       return {
@@ -60,7 +60,7 @@ export class Ledger {
   }
 
   public async getVersion (): Promise<LedgerVersion> {
-    return this.#withApp(async (app: SubstrateApp): Promise<LedgerVersion> => {
+    return this.#withApp(async (app: TetcoreApp): Promise<LedgerVersion> => {
       const { device_locked: isLocked, major, minor, patch, test_mode: isTestMode } = await this.#wrapError(app.getVersion());
 
       return {
@@ -72,7 +72,7 @@ export class Ledger {
   }
 
   public async sign (message: Uint8Array, accountOffset = 0, addressOffset = 0, { account = LEDGER_DEFAULT_ACCOUNT, addressIndex = LEDGER_DEFAULT_INDEX, change = LEDGER_DEFAULT_CHANGE }: Partial<AccountOptions> = {}): Promise<LedgerSignature> {
-    return this.#withApp(async (app: SubstrateApp): Promise<LedgerSignature> => {
+    return this.#withApp(async (app: TetcoreApp): Promise<LedgerSignature> => {
       const buffer = u8aToBuffer(message);
       const { signature } = await this.#wrapError(app.sign(account + accountOffset, change, addressIndex + addressOffset, buffer));
 
@@ -82,7 +82,7 @@ export class Ledger {
     });
   }
 
-  #getApp = async (): Promise<SubstrateApp> => {
+  #getApp = async (): Promise<TetcoreApp> => {
     if (!this.#app) {
       const def = transports.find(({ type }) => type === this.#transport);
 
@@ -96,7 +96,7 @@ export class Ledger {
     return this.#app;
   };
 
-  #withApp = async <T> (fn: (app: SubstrateApp) => Promise<T>): Promise<T> => {
+  #withApp = async <T> (fn: (app: TetcoreApp) => Promise<T>): Promise<T> => {
     try {
       const app = await this.#getApp();
 

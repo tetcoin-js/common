@@ -1,7 +1,7 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { u8aToHex } from '@polkadot/util';
+import { u8aToHex } from '@tetcoin/util';
 
 import { blake2AsU8a } from './asU8a';
 
@@ -14,7 +14,7 @@ import { blake2AsU8a } from './asU8a';
  * <BR>
  *
  * ```javascript
- * import { blake2AsHex } from '@polkadot/util-crypto';
+ * import { blake2AsHex } from '@tetcoin/util-crypto';
  *
  * blake2AsHex('abc'); // => 0xba80a53f981c4d0d
  * ```

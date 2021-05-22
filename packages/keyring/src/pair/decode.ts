@@ -4,8 +4,8 @@
 import type { KeyringPair$JsonEncodingTypes } from '../types';
 import type { PairInfo } from './types';
 
-import { assert, stringToU8a, u8aFixLength } from '@polkadot/util';
-import { naclDecrypt, scryptEncode, scryptFromU8a } from '@polkadot/util-crypto';
+import { assert, stringToU8a, u8aFixLength } from '@tetcoin/util';
+import { naclDecrypt, scryptEncode, scryptFromU8a } from '@tetcoin/util-crypto';
 
 import { ENCODING, NONCE_LENGTH, PKCS8_DIVIDER, PKCS8_HEADER, PUB_LENGTH, SCRYPT_LENGTH, SEC_LENGTH, SEED_LENGTH } from './defaults';
 

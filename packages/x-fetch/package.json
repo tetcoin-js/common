@@ -1,5 +1,5 @@
 {
-  "name": "@polkadot/x-fetch",
+  "name": "@tetcoin/x-fetch",
   "version": "5.7.1",
   "description": "A cross-environment fetch replacement",
   "browser": "browser.js",
@@ -10,12 +10,12 @@
   "maintainers": [],
   "contributors": [],
   "license": "Apache-2.0",
-  "repository": "github:polkadot-js/common",
-  "bugs": "https://github.com/polkadot-js/common/issues",
-  "homepage": "https://github.com/polkadot-js/common/tree/master/packages/x-fetch#readme",
+  "repository": "github:tetcoinjs/common",
+  "bugs": "https://github.com/tetcoinjs/common/issues",
+  "homepage": "https://github.com/tetcoinjs/common/tree/master/packages/x-fetch#readme",
   "dependencies": {
     "@babel/runtime": "^7.12.13",
-    "@polkadot/x-global": "5.7.1",
+    "@tetcoin/x-global": "5.7.1",
     "@types/node-fetch": "^2.5.8",
     "node-fetch": "^2.6.1"
   }

@@ -1,8 +1,8 @@
 // Copyright 2017-2021 @polkadot/keyring authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { hexToU8a, stringToU8a } from '@polkadot/util';
-import { cryptoWaitReady, encodeAddress, randomAsU8a, setSS58Format } from '@polkadot/util-crypto';
+import { hexToU8a, stringToU8a } from '@tetcoin/util';
+import { cryptoWaitReady, encodeAddress, randomAsU8a, setSS58Format } from '@tetcoin/util-crypto';
 
 import Keyring from '.';
 
@@ -284,12 +284,12 @@ describe('keypair', (): void => {
     });
   });
 
-  describe('ethereum', (): void => {
+  describe('vapory', (): void => {
     const PHRASE = 'seed sock milk update focus rotate barely fade car face mechanic mercy';
     let keyring: Keyring;
 
     beforeEach((): void => {
-      keyring = new Keyring({ type: 'ethereum' });
+      keyring = new Keyring({ type: 'vapory' });
     });
 
     it('adds a pair with the correct address', (): void => {
@@ -305,7 +305,7 @@ describe('keypair', (): void => {
 
       expect(json.address).toEqual('0x03b9dc646dd71118e5f7fda681ad9eca36eb3ee96f344f582fbe7b5bcdebb13077');
       expect(json.encoding).toEqual({
-        content: ['pkcs8', 'ethereum'],
+        content: ['pkcs8', 'vapory'],
         type: ['scrypt', 'xsalsa20-poly1305'],
         version: '3'
       });
@@ -313,7 +313,7 @@ describe('keypair', (): void => {
 
     it('allows adding from JSON', (): void => {
       const pair = keyring.addFromJson(
-        JSON.parse('{"address":"KWCv1L3QX9LDPwY4VzvLmarEmXjVJidUzZcinvVnmxAJJCBou","encoded":"U8qFEaghhmNV2PgFhjqzmhyUy37Ok7abfFU2MNsBd0sAgAAAAQAAAAgAAAA3+NniKogzNphiMNueB1X0sGA07B6CaXWfpXPx45iSXoTTprwzU5mOoSqUWO0GKHROI72LN+uJ8Yfv6Ll6JOOV3VPKfoVoFmYm+zDrrMPa0gk5E5kUuSijxADcE6zUrliPVr0Ix/qaghu5SJ7RtWDQLBf4Hp86SJ8Gg6gTSSk=","encoding":{"content":["pkcs8","ethereum"],"type":["scrypt","xsalsa20-poly1305"],"version":"3"},"meta":{}}')
+        JSON.parse('{"address":"KWCv1L3QX9LDPwY4VzvLmarEmXjVJidUzZcinvVnmxAJJCBou","encoded":"U8qFEaghhmNV2PgFhjqzmhyUy37Ok7abfFU2MNsBd0sAgAAAAQAAAAgAAAA3+NniKogzNphiMNueB1X0sGA07B6CaXWfpXPx45iSXoTTprwzU5mOoSqUWO0GKHROI72LN+uJ8Yfv6Ll6JOOV3VPKfoVoFmYm+zDrrMPa0gk5E5kUuSijxADcE6zUrliPVr0Ix/qaghu5SJ7RtWDQLBf4Hp86SJ8Gg6gTSSk=","encoding":{"content":["pkcs8","vapory"],"type":["scrypt","xsalsa20-poly1305"],"version":"3"},"meta":{}}')
       );
 
       expect(pair.publicKey).toEqual(hexToU8a('0x03b9dc646dd71118e5f7fda681ad9eca36eb3ee96f344f582fbe7b5bcdebb13077'));
@@ -330,7 +330,7 @@ describe('keypair', (): void => {
       const MESSAGE = stringToU8a('just some test message');
       const signer = keyring.createFromUri(PHRASE);
       const verifier = keyring.addFromJson(
-        JSON.parse('{"address":"KWCv1L3QX9LDPwY4VzvLmarEmXjVJidUzZcinvVnmxAJJCBou","encoded":"U8qFEaghhmNV2PgFhjqzmhyUy37Ok7abfFU2MNsBd0sAgAAAAQAAAAgAAAA3+NniKogzNphiMNueB1X0sGA07B6CaXWfpXPx45iSXoTTprwzU5mOoSqUWO0GKHROI72LN+uJ8Yfv6Ll6JOOV3VPKfoVoFmYm+zDrrMPa0gk5E5kUuSijxADcE6zUrliPVr0Ix/qaghu5SJ7RtWDQLBf4Hp86SJ8Gg6gTSSk=","encoding":{"content":["pkcs8","ethereum"],"type":["scrypt","xsalsa20-poly1305"],"version":"3"},"meta":{}}')
+        JSON.parse('{"address":"KWCv1L3QX9LDPwY4VzvLmarEmXjVJidUzZcinvVnmxAJJCBou","encoded":"U8qFEaghhmNV2PgFhjqzmhyUy37Ok7abfFU2MNsBd0sAgAAAAQAAAAgAAAA3+NniKogzNphiMNueB1X0sGA07B6CaXWfpXPx45iSXoTTprwzU5mOoSqUWO0GKHROI72LN+uJ8Yfv6Ll6JOOV3VPKfoVoFmYm+zDrrMPa0gk5E5kUuSijxADcE6zUrliPVr0Ix/qaghu5SJ7RtWDQLBf4Hp86SJ8Gg6gTSSk=","encoding":{"content":["pkcs8","vapory"],"type":["scrypt","xsalsa20-poly1305"],"version":"3"},"meta":{}}')
       );
 
       const signature = signer.sign(MESSAGE);
@@ -347,7 +347,7 @@ describe('keypair', (): void => {
       const MESSAGE = stringToU8a('just some test message');
       const signer = keyring.createFromUri(PHRASE);
       const verifier = keyring.addFromJson(
-        JSON.parse('{"address":"KWCv1L3QX9LDPwY4VzvLmarEmXjVJidUzZcinvVnmxAJJCBou","encoded":"U8qFEaghhmNV2PgFhjqzmhyUy37Ok7abfFU2MNsBd0sAgAAAAQAAAAgAAAA3+NniKogzNphiMNueB1X0sGA07B6CaXWfpXPx45iSXoTTprwzU5mOoSqUWO0GKHROI72LN+uJ8Yfv6Ll6JOOV3VPKfoVoFmYm+zDrrMPa0gk5E5kUuSijxADcE6zUrliPVr0Ix/qaghu5SJ7RtWDQLBf4Hp86SJ8Gg6gTSSk=","encoding":{"content":["pkcs8","ethereum"],"type":["scrypt","xsalsa20-poly1305"],"version":"3"},"meta":{}}')
+        JSON.parse('{"address":"KWCv1L3QX9LDPwY4VzvLmarEmXjVJidUzZcinvVnmxAJJCBou","encoded":"U8qFEaghhmNV2PgFhjqzmhyUy37Ok7abfFU2MNsBd0sAgAAAAQAAAAgAAAA3+NniKogzNphiMNueB1X0sGA07B6CaXWfpXPx45iSXoTTprwzU5mOoSqUWO0GKHROI72LN+uJ8Yfv6Ll6JOOV3VPKfoVoFmYm+zDrrMPa0gk5E5kUuSijxADcE6zUrliPVr0Ix/qaghu5SJ7RtWDQLBf4Hp86SJ8Gg6gTSSk=","encoding":{"content":["pkcs8","vapory"],"type":["scrypt","xsalsa20-poly1305"],"version":"3"},"meta":{}}')
       );
 
       const signature = signer.sign(MESSAGE, { withType: true });
@@ -368,7 +368,7 @@ describe('keypair', (): void => {
       keyring = new Keyring({ ss58Format: 42 });
     });
 
-    it('can re-encode an address to Polkadot live', (): void => {
+    it('can re-encode an address to Tetcoin live', (): void => {
       expect(
         keyring.encodeAddress('5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY', 0)
       ).toEqual('15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5');

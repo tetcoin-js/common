@@ -3,7 +3,7 @@
 
 import nacl from 'tweetnacl';
 
-import { isReady, sha512 } from '@polkadot/wasm-crypto';
+import { isReady, sha512 } from '@tetcoin/wasm-crypto';
 
 /**
  * @name sha512AsU8a
@@ -14,7 +14,7 @@ import { isReady, sha512 } from '@polkadot/wasm-crypto';
  * <BR>
  *
  * ```javascript
- * import { sha512AsU8a } from '@polkadot/util-crypto';
+ * import { sha512AsU8a } from '@tetcoin/util-crypto';
  *
  * sha512AsU8a(Uint8Array.from([...])); // => Uint8Array([...])
  * ```

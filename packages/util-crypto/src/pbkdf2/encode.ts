@@ -1,8 +1,8 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { u8aToU8a } from '@polkadot/util';
-import { isReady, pbkdf2 } from '@polkadot/wasm-crypto';
+import { u8aToU8a } from '@tetcoin/util';
+import { isReady, pbkdf2 } from '@tetcoin/wasm-crypto';
 
 import { randomAsU8a } from '../random/asU8a';
 import { pbkdf2Sync } from './pbkdf2';

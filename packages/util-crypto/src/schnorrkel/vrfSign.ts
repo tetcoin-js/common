@@ -3,8 +3,8 @@
 
 import type { Keypair } from '../types';
 
-import { assert, u8aToU8a } from '@polkadot/util';
-import { vrfSign } from '@polkadot/wasm-crypto';
+import { assert, u8aToU8a } from '@tetcoin/util';
+import { vrfSign } from '@tetcoin/wasm-crypto';
 
 const EMPTY_U8A = new Uint8Array();
 

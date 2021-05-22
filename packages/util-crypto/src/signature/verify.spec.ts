@@ -1,8 +1,8 @@
 // Copyright 2017-2021 @polkadot/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { hexToU8a, stringToU8a, u8aConcat, u8aToHex } from '@polkadot/util';
-import { waitReady } from '@polkadot/wasm-crypto';
+import { hexToU8a, stringToU8a, u8aConcat, u8aToHex } from '@tetcoin/util';
+import { waitReady } from '@tetcoin/wasm-crypto';
 
 import { decodeAddress } from '../address';
 import { signatureVerify } from '.';
@@ -49,29 +49,29 @@ describe('signatureVerify', (): void => {
       });
     });
 
-    it('verifies an ethereum signature', (): void => {
+    it('verifies an vapory signature', (): void => {
       expect(signatureVerify(MESSAGE, SIG_ET, ADDR_ET)).toEqual({
-        crypto: 'ethereum',
+        crypto: 'vapory',
         isValid: true,
         publicKey: hexToU8a(ADDR_ET)
       });
     });
 
-    it('verifies an ethereum signature (known)', (): void => {
+    it('verifies an vapory signature (known)', (): void => {
       const message = 'Pay KSMs to the Kusama account:88dc3417d5058ec4b4503e0c12ea1a0a89be200fe98922423d4334014fa6b0ee';
 
       expect(signatureVerify(
-        `\x19Ethereum Signed Message:\n${message.length.toString()}${message}`,
+        `\x19Vapory Signed Message:\n${message.length.toString()}${message}`,
         '0x55bd020bdbbdc02de34e915effc9b18a99002f4c29f64e22e8dcbb69e722ea6c28e1bb53b9484063fbbfd205e49dcc1f620929f520c9c4c3695150f05a28f52a01',
         '0x002309df96687e44280bb72c3818358faeeb699c'
       )).toEqual({
-        crypto: 'ethereum',
+        crypto: 'vapory',
         isValid: true,
         publicKey: hexToU8a('0x002309df96687e44280bb72c3818358faeeb699c')
       });
     });
 
-    it('fails on invalid ethereum signature', (): void => {
+    it('fails on invalid vapory signature', (): void => {
       expect(signatureVerify(MESSAGE, SIG_EC, ADDR_ET)).toEqual({
         crypto: 'none',
         isValid: false,
@@ -121,9 +121,9 @@ describe('signatureVerify', (): void => {
       });
     });
 
-    it('verifies an ethereum signature', (): void => {
+    it('verifies an vapory signature', (): void => {
       expect(signatureVerify(MESSAGE, MUL_ET, ADDR_ET)).toEqual({
-        crypto: 'ethereum',
+        crypto: 'vapory',
         isValid: true,
         publicKey: hexToU8a(ADDR_ET)
       });

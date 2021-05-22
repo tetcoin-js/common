@@ -1,5 +1,5 @@
 {
-  "name": "@polkadot/x-global",
+  "name": "@tetcoin/x-global",
   "version": "5.7.1",
   "description": "A cross-environment global replacement",
   "main": "index.js",
@@ -8,9 +8,9 @@
   "maintainers": [],
   "contributors": [],
   "license": "Apache-2.0",
-  "repository": "github:polkadot-js/common",
-  "bugs": "https://github.com/polkadot-js/common/issues",
-  "homepage": "https://github.com/polkadot-js/common/tree/master/packages/x-global#readme",
+  "repository": "github:tetcoinjs/common",
+  "bugs": "https://github.com/tetcoinjs/common/issues",
+  "homepage": "https://github.com/tetcoinjs/common/tree/master/packages/x-global#readme",
   "dependencies": {
     "@babel/runtime": "^7.12.13",
     "@types/node-fetch": "^2.5.8",

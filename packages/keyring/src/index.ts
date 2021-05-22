@@ -5,7 +5,7 @@ import './detectPackage';
 
 import { Keyring } from './keyring';
 
-export { decodeAddress, encodeAddress, setSS58Format } from '@polkadot/util-crypto';
+export { decodeAddress, encodeAddress, setSS58Format } from '@tetcoin/util-crypto';
 
 export default Keyring;
 

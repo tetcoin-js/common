@@ -13,7 +13,7 @@ import BN from 'bn.js';
  *
  * ```javascript
  * import BN from 'bn.js';
- * import { isBn } from '@polkadot/util';
+ * import { isBn } from '@tetcoin/util';
  *
  * console.log('isBn', isBn(new BN(1))); // => true
  * ```

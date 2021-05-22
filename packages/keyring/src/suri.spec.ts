@@ -1,10 +1,10 @@
 // Copyright 2017-2021 @polkadot/keyring authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-// From https://github.com/paritytech/substrate/wiki/Secret-URI-Test-Vectors
+// From https://github.com/tetcoin/tetcore/wiki/Secret-URI-Test-Vectors
 
-import { u8aToHex } from '@polkadot/util';
-import { cryptoWaitReady } from '@polkadot/util-crypto';
+import { u8aToHex } from '@tetcoin/util';
+import { cryptoWaitReady } from '@tetcoin/util-crypto';
 
 import Keyring from '.';
 

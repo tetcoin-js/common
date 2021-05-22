@@ -1,5 +1,5 @@
 {
-  "repository": "https://github.com/polkadot-js/common",
+  "repository": "https://github.com/tetcoinjs/common",
   "author": "Jaco Greeff <jacogr@gmail.com>",
   "license": "Apache-2",
   "private": true,
@@ -10,19 +10,19 @@
     "typescript": "^4.1.5"
   },
   "scripts": {
-    "build": "polkadot-dev-build-ts",
-    "build:release": "polkadot-ci-ghact-build",
-    "lint": "polkadot-dev-run-lint",
-    "clean": "polkadot-dev-clean-build",
-    "networks:crosscheck": "polkadot-dev-run-test packages/networks/src/crosscheck",
-    "postinstall": "polkadot-dev-yarn-only",
-    "test": "polkadot-dev-run-test --coverage --runInBand --testPathIgnorePatterns crosscheck",
-    "test:one": "polkadot-dev-run-test"
+    "build": "tetcoin-dev-build-ts",
+    "build:release": "tetcoin-ci-ghact-build",
+    "lint": "tetcoin-dev-run-lint",
+    "clean": "tetcoin-dev-clean-build",
+    "networks:crosscheck": "tetcoin-dev-run-test packages/networks/src/crosscheck",
+    "postinstall": "tetcoin-dev-yarn-only",
+    "test": "tetcoin-dev-run-test --coverage --runInBand --testPathIgnorePatterns crosscheck",
+    "test:one": "tetcoin-dev-run-test"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
-    "@polkadot/dev": "^0.61.26",
-    "@polkadot/ts": "^0.3.59",
+    "@tetcoin/dev": "^0.61.26",
+    "@tetcoin/ts": "^0.3.59",
     "@types/jest": "^26.0.20"
   },
   "version": "5.7.1"
