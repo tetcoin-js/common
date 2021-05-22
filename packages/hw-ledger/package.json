@@ -12,6 +12,6 @@
     "@babel/runtime": "^7.12.13",
     "@tetcoin/hw-ledger-transports": "5.7.1",
     "@tetcoin/util": "^5.7.1",
-    "@zondax/ledger-tetcoin": "^0.13.1"
+    "@tetcoin/ledger-tetcoin": "^0.13.6"
   }
 }
