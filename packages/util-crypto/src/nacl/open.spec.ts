@@ -3,8 +3,8 @@
 // of the Apache-2.0 license. See the LICENSE file for details.
 
 import { naclBoxKeypairFromSecret, naclKeypairFromString, naclOpen, naclSeal } from '.';
-import fromPath from '@polkadot/util-crypto/key/fromPath';
-import { keyExtractPath } from '@polkadot/util-crypto/key';
+import fromPath from '@tetcoin/util-crypto/key/fromPath';
+import { keyExtractPath } from '@tetcoin/util-crypto/key';
 
 describe('naclOpen', (): void => {
   it('opens a sealed message by the sender', (): void => {
@@ -22,7 +22,7 @@ describe('naclOpen', (): void => {
     );
   });
 
-  it('polkadot does double ratchet', () => {
+  it('tetcoin does double ratchet', () => {
     const sender = naclKeypairFromString('sender');
     const receiver = naclKeypairFromString('receiver');
 

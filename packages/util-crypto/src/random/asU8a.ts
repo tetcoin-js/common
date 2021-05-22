@@ -13,7 +13,7 @@ import nacl from 'tweetnacl';
  * <BR>
  *
  * ```javascript
- * import { randomAsU8a } from '@polkadot/util-crypto';
+ * import { randomAsU8a } from '@tetcoin/util-crypto';
  *
  * randomAsU8a(); // => Uint8Array([...])
  * ```

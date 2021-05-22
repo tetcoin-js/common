@@ -11,7 +11,7 @@
  * <BR>
  *
  * ```javascript
- * import { isBigInt } from '@polkadot/util';
+ * import { isBigInt } from '@tetcoin/util';
  *
  * console.log('isBigInt', isBigInt(123_456n)); // => true
  * ```

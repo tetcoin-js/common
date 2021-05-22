@@ -1,5 +1,5 @@
 {
-  "extends": "./node_modules/@polkadot/dev/config/tsconfig",
+  "extends": "./node_modules/@tetcoin/dev/config/tsconfig",
   "exclude": [
     "build/**/*",
     "**/build/**/*"
@@ -7,16 +7,16 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@polkadot/keyring": [ "packages/keyring/src" ],
-      "@polkadot/keyring/*": [ "packages/keyring/src/*" ],
-      "@polkadot/util-crypto": [ "packages/util-crypto/src" ],
-      "@polkadot/util-crypto/*": [ "packages/util-crypto/src/*" ],
-      "@polkadot/util": [ "packages/util/src" ],
-      "@polkadot/util/*": [ "packages/util/src/*" ]
+      "@tetcoin/keyring": [ "packages/keyring/src" ],
+      "@tetcoin/keyring/*": [ "packages/keyring/src/*" ],
+      "@tetcoin/util-crypto": [ "packages/util-crypto/src" ],
+      "@tetcoin/util-crypto/*": [ "packages/util-crypto/src/*" ],
+      "@tetcoin/util": [ "packages/util/src" ],
+      "@tetcoin/util/*": [ "packages/util/src/*" ]
     },
     "skipLibCheck": true,
     "typeRoots": [
-      "./node_modules/@polkadot/ts",
+      "./node_modules/@tetcoin/ts",
       "./node_modules/@types"
     ]
   }

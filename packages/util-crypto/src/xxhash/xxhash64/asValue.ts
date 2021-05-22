@@ -3,7 +3,7 @@
 // of the Apache-2.0 license. See the LICENSE file for details.
 
 import xxhashjs from 'xxhashjs';
-import { isBuffer, isString, u8aToBuffer } from '@polkadot/util';
+import { isBuffer, isString, u8aToBuffer } from '@tetcoin/util';
 
 /**
  * @name xxhash64AsValue
@@ -14,7 +14,7 @@ import { isBuffer, isString, u8aToBuffer } from '@polkadot/util';
  * <BR>
  *
  * ```javascript
- * import { xxhash64AsValue } from '@polkadot/util-crypto';
+ * import { xxhash64AsValue } from '@tetcoin/util-crypto';
  *
  * xxhash64AsValue('abcd', 0xabcd)); // => e29f70f8b8c96df7
  * ```

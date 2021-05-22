@@ -1,24 +1,24 @@
 module.exports = {
   base: '/common/',
-  title: 'polkadot-js/common',
-  description: 'Common utilities and libraries that are in use accross all @polkadot projects',
+  title: 'tetcoin-js/common',
+  description: 'Common utilities and libraries that are in use accross all @tetcoin projects',
   markdown: {
     lineNumbers: true
   },
   themeConfig: {
     displayAllHeaders: true,
     nav: [
-      { text: 'Polkadot/Substrate Apps', link: 'https://polkadot.js.org/apps/' },
-      { text: 'Project family', link: 'https://polkadot.js.org/' },
+      { text: 'Tetcoin/Tetcore Apps', link: 'https://js.tetcoin.org/apps/' },
+      { text: 'Project family', link: 'https://js.tetcoin.org/' },
       {
         text: 'Documentation',
         items: [
-          { text: 'API Reference', link: 'https://polkadot.js.org/api/' },
-          { text: 'Utility Reference (this)', link: 'https://polkadot.js.org/common/' },
-          { text: 'UI Libs Reference', link: 'https://polkadot.js.org/ui/' },
+          { text: 'API Reference', link: 'https://js.tetcoin.org/api/' },
+          { text: 'Utility Reference (this)', link: 'https://js.tetcoin.org/common/' },
+          { text: 'UI Libs Reference', link: 'https://js.tetcoin.org/ui/' },
         ]
       },
-      { text: 'GitHub', link: 'https://github.com/polkadot-js/common' }
+      { text: 'GitHub', link: 'https://github.com/tetcoin-js/common' }
     ],
     search: false,
     sidebar: [
@@ -32,9 +32,9 @@ module.exports = {
           ['/examples/keyring/02_load_accounts/', 'Load Accounts']
         ]
       },
-      ['/util/', '@polkadot/util'],
-      ['/util-crypto/', '@polkadot/util-crypto'],
-      ['/keyring/', '@polkadot/keyring'],
+      ['/util/', '@tetcoin/util'],
+      ['/util-crypto/', '@tetcoin/util-crypto'],
+      ['/keyring/', '@tetcoin/keyring'],
       '/CONTRIBUTING.md'
     ]
   }

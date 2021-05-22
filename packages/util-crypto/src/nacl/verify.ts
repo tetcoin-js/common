@@ -3,8 +3,8 @@
 // of the Apache-2.0 license. See the LICENSE file for details.
 
 import nacl from 'tweetnacl';
-import { u8aToU8a } from '@polkadot/util';
-import { isReady, ed25519Verify } from '@polkadot/wasm-crypto';
+import { u8aToU8a } from '@tetcoin/util';
+import { isReady, ed25519Verify } from '@tetcoin/wasm-crypto';
 
 /**
  * @name naclSign
@@ -15,7 +15,7 @@ import { isReady, ed25519Verify } from '@polkadot/wasm-crypto';
  * <BR>
  *
  * ```javascript
- * import { naclVerify } from '@polkadot/util-crypto';
+ * import { naclVerify } from '@tetcoin/util-crypto';
  *
  * naclVerify([...], [...], [...]); // => true/false
  * ```

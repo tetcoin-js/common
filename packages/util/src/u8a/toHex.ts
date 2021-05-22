@@ -13,7 +13,7 @@ const ALPHABET = '0123456789abcdef';
  * <BR>
  *
  * ```javascript
- * import { u8aToHex } from '@polkadot/util';
+ * import { u8aToHex } from '@tetcoin/util';
  *
  * u8aToHex(new Uint8Array([0x68, 0x65, 0x6c, 0x6c, 0xf])); // 0x68656c0f
  * ```

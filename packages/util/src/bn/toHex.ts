@@ -25,7 +25,7 @@ interface Options extends ToBnOptions {
  *
  * ```javascript
  * import BN from 'bn.js';
- * import { bnToHex } from '@polkadot/util';
+ * import { bnToHex } from '@tetcoin/util';
  *
  * bnToHex(new BN(0x123456)); // => '0x123456'
  * ```

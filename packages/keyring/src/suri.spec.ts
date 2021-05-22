@@ -2,10 +2,10 @@
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
 
-// From https://github.com/paritytech/substrate/wiki/Secret-URI-Test-Vectors
+// From https://github.com/tetcoin/tetcore/wiki/Secret-URI-Test-Vectors
 
-import { u8aToHex } from '@polkadot/util';
-import { cryptoWaitReady } from '@polkadot/util-crypto';
+import { u8aToHex } from '@tetcoin/util';
+import { cryptoWaitReady } from '@tetcoin/util-crypto';
 
 import Keyring from '.';
 

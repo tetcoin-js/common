@@ -13,7 +13,7 @@ import u8aToU8a from './toU8a';
  * <BR>
  *
  * ```javascript
- * import { u8aConcat } from '@polkadot/util';
+ * import { u8aConcat } from '@tetcoin/util';
  *
  * u8aConcat(
  *   new Uint8Array([1, 2, 3]),

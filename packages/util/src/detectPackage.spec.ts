@@ -5,10 +5,10 @@
 import { detectPackage } from '.';
 
 describe('assertSingletonPackage', (): void => {
-  const PKG = '@polkadot/util';
+  const PKG = '@tetcoin/util';
   const VER1 = '9.8.0-beta.45';
   const VER2 = '9.7.1';
-  const PATH = '/Users/jaco/Projects/polkadot-js/api/node_modules/@polkadot/util';
+  const PATH = '/Users/jaco/Projects/tetcoin-js/api/node_modules/@tetcoin/util';
 
   it('should not log the first time', (): void => {
     const spy = jest.spyOn(console, 'warn');
@@ -22,7 +22,7 @@ describe('assertSingletonPackage', (): void => {
     const spy = jest.spyOn(console, 'warn');
 
     detectPackage({ name: PKG, version: VER2 }, `${PATH}/02`);
-    expect(spy).toHaveBeenCalledWith(`Multiple instances of @polkadot/util detected, ensure that there is only one package in your dependency tree.\n\t${VER1}\t${PATH}/01\n\t${VER2}        \t${PATH}/02`);
+    expect(spy).toHaveBeenCalledWith(`Multiple instances of @tetcoin/util detected, ensure that there is only one package in your dependency tree.\n\t${VER1}\t${PATH}/01\n\t${VER2}        \t${PATH}/02`);
     spy.mockRestore();
   });
 });

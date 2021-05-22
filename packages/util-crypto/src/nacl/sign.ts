@@ -5,8 +5,8 @@
 import { Keypair } from '../types';
 
 import nacl from 'tweetnacl';
-import { assert, u8aToU8a } from '@polkadot/util';
-import { isReady, ed25519Sign } from '@polkadot/wasm-crypto';
+import { assert, u8aToU8a } from '@tetcoin/util';
+import { isReady, ed25519Sign } from '@tetcoin/wasm-crypto';
 
 /**
  * @name naclSign
@@ -17,7 +17,7 @@ import { isReady, ed25519Sign } from '@polkadot/wasm-crypto';
  * <BR>
  *
  * ```javascript
- * import { naclSign } from '@polkadot/util-crypto';
+ * import { naclSign } from '@tetcoin/util-crypto';
  *
  * naclSign([...], [...]); // => [...]
  * ```

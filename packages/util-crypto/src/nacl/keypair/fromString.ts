@@ -4,7 +4,7 @@
 
 import { Keypair } from '../../types';
 
-import { stringToU8a } from '@polkadot/util';
+import { stringToU8a } from '@tetcoin/util';
 
 import blake2AsU8a from '../../blake2/asU8a';
 import fromSeed from './fromSeed';
@@ -18,7 +18,7 @@ import fromSeed from './fromSeed';
  * <BR>
  *
  * ```javascript
- * import { naclKeypairFromString } from '@polkadot/util-crypto';
+ * import { naclKeypairFromString } from '@tetcoin/util-crypto';
  *
  * naclKeypairFromString('test'); // => { secretKey: [...], publicKey: [...] }
  * ```

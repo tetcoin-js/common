@@ -2,12 +2,12 @@
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
 
-import { Keypair, KeypairType } from '@polkadot/util-crypto/types';
+import { Keypair, KeypairType } from '@tetcoin/util-crypto/types';
 import { KeyringPair, KeyringPair$Json, KeyringPair$Meta, SignOptions } from '../types';
 import { PairInfo } from './types';
 
-import { assert, u8aConcat } from '@polkadot/util';
-import { keyExtractPath, keyFromPath, naclKeypairFromSeed as naclFromSeed, naclSign, naclVerify, schnorrkelKeypairFromSeed as schnorrkelFromSeed, schnorrkelSign, schnorrkelVerify } from '@polkadot/util-crypto';
+import { assert, u8aConcat } from '@tetcoin/util';
+import { keyExtractPath, keyFromPath, naclKeypairFromSeed as naclFromSeed, naclSign, naclVerify, schnorrkelKeypairFromSeed as schnorrkelFromSeed, schnorrkelSign, schnorrkelVerify } from '@tetcoin/util-crypto';
 
 import decode from './decode';
 import encode from './encode';

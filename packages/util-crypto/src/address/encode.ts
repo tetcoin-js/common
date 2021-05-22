@@ -4,10 +4,10 @@
 
 import { Prefix } from './types';
 
-// Original implementation: https://github.com/paritytech/polka-ui/blob/4858c094684769080f5811f32b081dd7780b0880/src/polkadot.js#L34
+// Original implementation: https://github.com/paritytech/polka-ui/blob/4858c094684769080f5811f32b081dd7780b0880/src/tetcoin.js#L34
 
 import bs58 from 'bs58';
-import { assert, u8aConcat, u8aToBuffer } from '@polkadot/util';
+import { assert, u8aConcat, u8aToBuffer } from '@tetcoin/util';
 
 import decode from './decode';
 import defaults from './defaults';

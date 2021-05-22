@@ -14,7 +14,7 @@ import compactFromU8a from './fromU8a';
  * <BR>
  *
  * ```javascript
- * import { compactStripLength } from '@polkadot/util';
+ * import { compactStripLength } from '@tetcoin/util';
  *
  * console.log(compactStripLength(new Uint8Array([2 << 2, 0xde, 0xad]))); // [2, Uint8Array[0xde, 0xad]]
  * ```

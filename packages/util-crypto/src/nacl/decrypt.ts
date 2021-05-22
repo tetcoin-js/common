@@ -13,7 +13,7 @@ import nacl from 'tweetnacl';
  * <BR>
  *
  * ```javascript
- * import { naclDecrypt } from '@polkadot/util-crypto';
+ * import { naclDecrypt } from '@tetcoin/util-crypto';
  *
  * naclDecrypt([...], [...], [...]); // => [...]
  * ```

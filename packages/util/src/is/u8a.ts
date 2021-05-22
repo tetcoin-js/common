@@ -13,7 +13,7 @@ import isInstanceOf from './instanceOf';
  * <BR>
  *
  * ```javascript
- * import { isUint8Array } from '@polkadot/util';
+ * import { isUint8Array } from '@tetcoin/util';
  *
  * console.log('isU8a', isU8a([])); // => false
  * ```

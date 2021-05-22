@@ -3,7 +3,7 @@
 // of the Apache-2.0 license. See the LICENSE file for details.
 
 import DeriveJunction from './DeriveJunction';
-import { assert } from '@polkadot/util';
+import { assert } from '@tetcoin/util';
 
 const RE_JUNCTION = /\/(\/?)([^/]+)/g;
 

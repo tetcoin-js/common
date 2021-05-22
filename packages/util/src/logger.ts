@@ -101,7 +101,7 @@ function noop (...values: Logger$Data): void {
  * <BR>
  *
  * ```javascript
- * const l from '@polkadot/util/logger')('test');
+ * const l from '@tetcoin/util/logger')('test');
  *
  * l.log('blah'); // <date>     TEST: blah
  * ```

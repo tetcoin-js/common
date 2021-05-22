@@ -2,8 +2,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable @typescript-eslint/unbound-method */
 
-const { stringToU8a, u8aToHex } = require('@polkadot/util');
-const { naclEncrypt, naclKeypairFromSeed, naclSign, naclVerify, randomAsU8a } = require('@polkadot/util-crypto');
+const { stringToU8a, u8aToHex } = require('@tetcoin/util');
+const { naclEncrypt, naclKeypairFromSeed, naclSign, naclVerify, randomAsU8a } = require('@tetcoin/util-crypto');
 
 async function main () {
   // Create account seed for Alice as fallback if generated mnemonic not valid

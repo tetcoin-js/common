@@ -4,7 +4,7 @@
 
 import { KeypairType, VerifyResult } from '../types';
 
-import { assert, u8aToU8a } from '@polkadot/util';
+import { assert, u8aToU8a } from '@tetcoin/util';
 
 import addressDecode from '../address/decode';
 import naclVerify from '../nacl/verify';

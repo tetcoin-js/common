@@ -6,12 +6,12 @@
 # 2.7.1 Mar 31, 2020
 
 - Add `bnSqrt` to calculate the integer sqrt via Newton iteration
-- Allow for optional wasm-crypto, specifically via `@polkadot/util-crypto/noWasm`
+- Allow for optional wasm-crypto, specifically via `@tetcoin/util-crypto/noWasm`
 - Misc. CI infrastructure cleanups
 
 # 2.6.1 Feb 29, 2020
 
-- **Breaking change** Following on the 2.0 release, `@polkadot/wasm` was updated to 1.1+. sr25510 now only verifies 0.8+ signatures, closing the loop on dropping Substrate 1.x-era support
+- **Breaking change** Following on the 2.0 release, `@tetcoin/wasm` was updated to 1.1+. sr25510 now only verifies 0.8+ signatures, closing the loop on dropping Tetcore 1.x-era support
 - Add `signatureVerify (message: Uint8Array | string, signature: Uint8Array | string, addressOrPublicKey: Uint8Array | string): VerifyResult` to verify any signature, regardless of type. Returns validity & detected crypto type.
 - Add `cryptoIsReady (): boolean` function to check status of initialization
 - Add `addressCheckChecksum (decoded: Uint8Array)` as an helper to extract and verify the ss58 checksum
@@ -29,14 +29,14 @@
 - Ensure that `formatBalance` does not apply unit overrides apply when no SI is applicable
 - Adjust `formatBalance(<balance>, <options>)` to take expanded `withUnit: string | boolean` option where string is an actual unit, e.g. `KSM`
 - The `decimals` option to `formatBalance` should now be passed as part of the `options` (previous last-param deprecated)
-- The `.setSS58Format` on keyring will now just operate on pairs created on the keyring, not globally. The global `setSS58Format` in `@polkadot/util-crypto` will be deprecated.
+- The `.setSS58Format` on keyring will now just operate on pairs created on the keyring, not globally. The global `setSS58Format` in `@tetcoin/util-crypto` will be deprecated.
 - The deprecated `addressPrefix` option to keyring has been belatedly removed (Use `ss58Format` rather)
 
 # 2.3.1 Feb 15, 2020
 
 - Remove dependency on moment.js with `formatDate` function (Thanks to https://github.com/AndreasGassmann)
 - Move TypeScript `@types/*` to dev deps (Thanks to https://github.com/AndreasGassmann)
-- Update to `@polkadot/wasm-crypto` 1.0
+- Update to `@tetcoin/wasm-crypto` 1.0
 - Cleanup dependencies to pave the way for using yarn 2 (Explicit instead of implicit)
 
 # 2.2.1 Feb 06, 2020
@@ -49,8 +49,8 @@
 
 # 2.0.1 Jan 30, 2020
 
-- Update w3f/schnorrkel to 0.8.5 (Full Substrate 2.x support, no 1.x support)
-- Remove Alice session (ed2551) account from testing keyring (not applicable to Substrate 2.x)
+- Update w3f/schnorrkel to 0.8.5 (Full Tetcore 2.x support, no 1.x support)
+- Remove Alice session (ed2551) account from testing keyring (not applicable to Tetcore 2.x)
 - Remove `chainspec`, `db`, `trie-codec`, `trie-db` and `trie-hash` packages (moved to client)
 - Renamed `assertSingletonPackage` to `detectPackage` with inclusion of version listing
 - Swap to elliptic library for secp2561 recovery (No node bindings)
@@ -67,7 +67,7 @@
 
 # 1.6.1 Oct 24, 2019
 
-- `pair.sign(message)` now takes an optional second `options?: SignOptions` parameter, where `SignOptions` is currently defined as `{ withType: boolean }`. Here `withType` instructs the signing to prepend the type of signature (ed2551, sr25519 or ecdsa). This is used for the new Polkadot/Substrate MultiSignature format.
+- `pair.sign(message)` now takes an optional second `options?: SignOptions` parameter, where `SignOptions` is currently defined as `{ withType: boolean }`. Here `withType` instructs the signing to prepend the type of signature (ed2551, sr25519 or ecdsa). This is used for the new Tetcoin/Tetcore MultiSignature format.
 
 # 1.5.1 Sep 25, 2019
 
@@ -80,7 +80,7 @@
 - **Breaking change** To set the `ss58Format`, you should now use `setSS58Format` as opposed to the old `setAddressPrefix`
 - Renamed `keyring.setAddressPrefix` to `keyring.setSS58Format`
 - Deprecated `addressPrefix` on the keyring options, added the `ss58Format` as a replacement (aligning with chain properties - the old version is still accepted)
-- Added `stringToHex` and `hexToString` conversion utilities to `@polkadot/util`
+- Added `stringToHex` and `hexToString` conversion utilities to `@tetcoin/util`
 - Swap to [Babel 7.6.0](https://babeljs.io/) for all compilation, for latest improvements in code generation
 
 # 1.3.1 Sep 10, 2019
@@ -103,9 +103,9 @@
 
 # 0.94.1 Jul 20, 2019
 
-- Add `checkAddress(address, prefix)` to `@polkadot/util-crypto` that validates an ss-58 address
+- Add `checkAddress(address, prefix)` to `@tetcoin/util-crypto` that validates an ss-58 address
 - Add support for the Kusama network (as a valid checked prefix)
-- Add an `asm.js` fallback for the React Native environment (via `@polkadot/wasm-crypto`)
+- Add an `asm.js` fallback for the React Native environment (via `@tetcoin/wasm-crypto`)
 - The ed25519 key for Alice (representing the session), now appears in the test keyrings
 - Fix missing dependencies for keyring (after address moves in 0.93.1)
 
@@ -115,7 +115,7 @@
   - `getMeta` use the `meta` getter, i.e. `console.log(pair.meta.name)`
   - `address` use the `address` getter, i.e. `console.log(pair.address)`
   - `publicKey` use the `publicKey` getter, i.e. `console.log(pair.publicKey)`
-- `Move decodeAddress`, `encodeAddress` & `setAddressPrefix` functions into `@polkadot/util-crypto` from `@polkadot/keyring`. External interfaces should not be affected at this point since it is also (still) exported and exposed on keyring
+- `Move decodeAddress`, `encodeAddress` & `setAddressPrefix` functions into `@tetcoin/util-crypto` from `@tetcoin/keyring`. External interfaces should not be affected at this point since it is also (still) exported and exposed on keyring
 
 # 0.92.1 Jun 04, 2019
 
@@ -126,7 +126,7 @@
 # 0.91.1 May 22, 2019
 
 - ed25519/sr25519 sign & verify functions can now take the message input as Uint8Array/string/hex and verify allows for the signature/publicKey to be specified as Uint8Array/hex
-- Update `@polkadot/wasm` to include a maintenance bump for the `w3f/schnorrkel` libraries
+- Update `@tetcoin/wasm` to include a maintenance bump for the `w3f/schnorrkel` libraries
 
 # 0.90.1 May 08, 2019
 
@@ -136,7 +136,7 @@
 # 0.76.1 Apr 03, 2019
 
 - Fix `addFromMnemonic` to generate using new-style derivation.
-- Pull in `formatBalance`, `formatDecimal`, `formatElapsed`, `formatNumber`, `calcSi`, `findSi` & `isTestChain` utility functions from the originals in `@polkadot/ui-util`
+- Pull in `formatBalance`, `formatDecimal`, `formatElapsed`, `formatNumber`, `calcSi`, `findSi` & `isTestChain` utility functions from the originals in `@tetcoin/ui-util`
 - Swap out `wasm-schnorrkel` & `wasm-ed25519` for combined version with `wasm-crypto`
 - Swap DB interfaces to optional LRU, removing `transactionAsync` (client-only changes)
 
@@ -165,7 +165,7 @@
 
 # 0.38.1 Mar 18, 2019
 
-- Align with current substrate master for sr25519 keys and hard/soft derivation
+- Align with current tetcore master for sr25519 keys and hard/soft derivation
 - Swap default dev keys to derived (sr25519)
 
 # 0.37.1 Mar 14, 2019

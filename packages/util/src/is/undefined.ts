@@ -11,7 +11,7 @@
  * <BR>
  *
  * ```javascript
- * import { isUndefined } from '@polkadot/util';
+ * import { isUndefined } from '@tetcoin/util';
  *
  * console.log('isUndefined', isUndefined(void(0))); // => true
  * ```

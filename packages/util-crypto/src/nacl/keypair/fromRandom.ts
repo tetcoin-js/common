@@ -15,7 +15,7 @@ import nacl from 'tweetnacl';
  * <BR>
  *
  * ```javascript
- * import { naclKeypairFromRandom } from '@polkadot/util-crypto';
+ * import { naclKeypairFromRandom } from '@tetcoin/util-crypto';
  *
  * naclKeypairFromRandom(); // => { secretKey: [...], publicKey: [...] }
  * ```

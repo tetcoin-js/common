@@ -11,7 +11,7 @@
  * <BR>
  *
  * ```javascript
- * import { isNull } from '@polkadot/util';
+ * import { isNull } from '@tetcoin/util';
  *
  * console.log('isNull', isNull(null)); // => true
  * ```

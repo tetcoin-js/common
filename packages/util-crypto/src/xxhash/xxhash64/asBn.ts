@@ -15,7 +15,7 @@ import xxhash64AsRaw from './asRaw';
  * <BR>
  *
  * ```javascript
- * import { xxhash64AsNumber } from '@polkadot/util-crypto';
+ * import { xxhash64AsNumber } from '@tetcoin/util-crypto';
  *
  * xxhash64AsBn('abcd', 0xabcd)); // => new BN(0xe29f70f8b8c96df7)
  * ```

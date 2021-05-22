@@ -2,7 +2,7 @@
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
 
-// default substrate dev phrase
+// default tetcore dev phrase
 const DEV_PHRASE = 'bottom drive obey lake curtain smoke basket hold race lonely fit walk';
 
 // seed from the above phrase

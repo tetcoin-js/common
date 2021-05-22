@@ -3,14 +3,14 @@
 // of the Apache-2.0 license. See the LICENSE file for details.
 
 export const allowedSS58 = [
-  // Polkadot
+  // Tetcoin
   0, 1,
   // Kusama
   2, 3,
   // Dothereum
   20,
-  // Substrate default
+  // Tetcore default
   42, 43,
-  // Substrate BBQ (deprecated)
+  // Tetcore BBQ (deprecated)
   68, 69
 ];

@@ -2,11 +2,11 @@
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
 
-import { KeypairType } from '@polkadot/util-crypto/types';
+import { KeypairType } from '@tetcoin/util-crypto/types';
 import { KeyringPair$Json, KeyringPair$Meta } from '../types';
 
-import { u8aToHex } from '@polkadot/util';
-import { encodeAddress } from '@polkadot/util-crypto';
+import { u8aToHex } from '@tetcoin/util';
+import { encodeAddress } from '@tetcoin/util-crypto';
 
 type PairStateJson = KeyringPair$Meta & {
   publicKey: Uint8Array;

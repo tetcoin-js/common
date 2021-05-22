@@ -25,7 +25,7 @@ function newtonIteration (n: BN, x0: BN): BN {
  *
  * ```javascript
  * import BN from 'bn.js';
- * import { bnSqrt } from '@polkadot/util';
+ * import { bnSqrt } from '@tetcoin/util';
  *
  * bnSqrt(new BN(16)).toString(); // => '4'
  * ```

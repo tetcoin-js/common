@@ -2,7 +2,7 @@
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
 
-import { hexAddPrefix } from '@polkadot/util';
+import { hexAddPrefix } from '@tetcoin/util';
 
 import xxhash64AsRaw from './asRaw';
 
@@ -15,7 +15,7 @@ import xxhash64AsRaw from './asRaw';
  * <BR>
  *
  * ```javascript
- * import { xxhash64AsHex } from '@polkadot/util-crypto';
+ * import { xxhash64AsHex } from '@tetcoin/util-crypto';
  *
  * xxhash64AsHex('abcd', 0xabcd)); // => 0xe29f70f8b8c96df7
  * ```

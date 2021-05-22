@@ -3,8 +3,8 @@
 /* eslint-disable @typescript-eslint/unbound-method */
 
 // Import Keyring class and utility function
-const Keyring = require('@polkadot/keyring').default;
-const stringToU8a = require('@polkadot/util/string/toU8a').default;
+const Keyring = require('@tetcoin/keyring').default;
+const stringToU8a = require('@tetcoin/util/string/toU8a').default;
 
 async function main () {
   // Create account seed for Alice

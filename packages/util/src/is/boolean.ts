@@ -11,7 +11,7 @@
  * <BR>
  *
  * ```javascript
- * import { isBoolean } from '@polkadot/util';
+ * import { isBoolean } from '@tetcoin/util';
  *
  * isBoolean(false); // => true
  * ```

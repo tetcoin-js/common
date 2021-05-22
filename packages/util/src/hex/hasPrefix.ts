@@ -13,7 +13,7 @@ import isHex from '../is/hex';
  * <BR>
  *
  * ```javascript
- * import { hexHasPrefix } from '@polkadot/util';
+ * import { hexHasPrefix } from '@tetcoin/util';
  *
  * console.log('has prefix', hexHasPrefix('0x1234')); // => true
  * ```

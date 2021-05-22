@@ -11,7 +11,7 @@
  * <BR>
  *
  * ```javascript
- * import { isNumber } from '@polkadot/util';
+ * import { isNumber } from '@tetcoin/util';
  *
  * console.log('isNumber', isNumber(1234)); // => true
  * ```

@@ -2,8 +2,8 @@
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
 
-import { u8aToU8a } from '@polkadot/util';
-import { isReady, twox } from '@polkadot/wasm-crypto';
+import { u8aToU8a } from '@tetcoin/util';
+import { isReady, twox } from '@tetcoin/wasm-crypto';
 
 import xxhash64AsBn from './xxhash64/asBn';
 
@@ -16,7 +16,7 @@ import xxhash64AsBn from './xxhash64/asBn';
  * <BR>
  *
  * ```javascript
- * import { xxhashAsU8a } from '@polkadot/util-crypto';
+ * import { xxhashAsU8a } from '@tetcoin/util-crypto';
  *
  * xxhashAsU8a('abc'); // => 0x44bc2cf5ad770999
  * ```

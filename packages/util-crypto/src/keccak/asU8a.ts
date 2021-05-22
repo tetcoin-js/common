@@ -3,8 +3,8 @@
 // of the Apache-2.0 license. See the LICENSE file for details.
 
 import jssha3 from 'js-sha3';
-import { u8aToU8a } from '@polkadot/util';
-import { isReady, keccak256 } from '@polkadot/wasm-crypto';
+import { u8aToU8a } from '@tetcoin/util';
+import { isReady, keccak256 } from '@tetcoin/wasm-crypto';
 
 /**
  * @name keccakAsU8a
@@ -15,7 +15,7 @@ import { isReady, keccak256 } from '@polkadot/wasm-crypto';
  * <BR>
  *
  * ```javascript
- * import { keccakAsU8a } from '@polkadot/util-crypto';
+ * import { keccakAsU8a } from '@tetcoin/util-crypto';
  *
  * keccakAsU8a('123'); // => Uint8Array
  * ```

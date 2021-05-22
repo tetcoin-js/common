@@ -2,7 +2,7 @@
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
 
-import { u8aToHex } from '@polkadot/util';
+import { u8aToHex } from '@tetcoin/util';
 
 import blake2AsU8a from './asU8a';
 
@@ -15,7 +15,7 @@ import blake2AsU8a from './asU8a';
  * <BR>
  *
  * ```javascript
- * import { blake2AsHex } from '@polkadot/util-crypto';
+ * import { blake2AsHex } from '@tetcoin/util-crypto';
  *
  * blake2AsHex('abc'); // => 0xba80a53f981c4d0d
  * ```

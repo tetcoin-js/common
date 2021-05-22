@@ -3,8 +3,8 @@
 // of the Apache-2.0 license. See the LICENSE file for details.
 
 import { mnemonicToSeedSync } from 'bip39';
-import { bufferToU8a } from '@polkadot/util';
-import { bip39ToSeed, isReady } from '@polkadot/wasm-crypto';
+import { bufferToU8a } from '@tetcoin/util';
+import { bip39ToSeed, isReady } from '@tetcoin/wasm-crypto';
 
 /**
  * @name toSeed
@@ -13,7 +13,7 @@ import { bip39ToSeed, isReady } from '@polkadot/wasm-crypto';
  * <BR>
  *
  * ```javascript
- * import { mnemonicGenerate, mnemonicToSeed, mnemonicValidate } from '@polkadot/util-crypto';
+ * import { mnemonicGenerate, mnemonicToSeed, mnemonicValidate } from '@tetcoin/util-crypto';
  *
  * const mnemonic = mnemonicGenerate(); // => string
  * const isValidMnemonic = mnemonicValidate(mnemonic); // => boolean

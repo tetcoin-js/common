@@ -13,7 +13,7 @@ import xxhash64AsValue from './asValue';
  * <BR>
  *
  * ```javascript
- * import { xxhash64AsRaw } from '@polkadot/util-crypto';
+ * import { xxhash64AsRaw } from '@tetcoin/util-crypto';
  *
  * xxhash64AsRaw('abcd', 0xabcd)); // => e29f70f8b8c96df7
  * ```

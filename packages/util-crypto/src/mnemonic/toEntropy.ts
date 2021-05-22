@@ -5,8 +5,8 @@
 import '../polyfill';
 
 import { mnemonicToEntropy } from 'bip39';
-import { hexAddPrefix, hexToU8a } from '@polkadot/util';
-import { bip39ToEntropy, isReady } from '@polkadot/wasm-crypto';
+import { hexAddPrefix, hexToU8a } from '@tetcoin/util';
+import { bip39ToEntropy, isReady } from '@tetcoin/wasm-crypto';
 
 export default function toEntropy (mnemonic: string): Uint8Array {
   return isReady()

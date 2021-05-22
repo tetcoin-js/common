@@ -2,18 +2,18 @@
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
 
-import { KeypairType } from '@polkadot/util-crypto/types';
+import { KeypairType } from '@tetcoin/util-crypto/types';
 import { KeyringInstance, KeyringPair, KeyringPair$Json, KeyringPair$Meta, KeyringOptions } from './types';
 
-import { assert, hexToU8a, isHex, stringToU8a } from '@polkadot/util';
-import { decodeAddress, encodeAddress, keyExtractSuri, keyFromPath, naclKeypairFromSeed as naclFromSeed, schnorrkelKeypairFromSeed as schnorrkelFromSeed, mnemonicToMiniSecret } from '@polkadot/util-crypto';
+import { assert, hexToU8a, isHex, stringToU8a } from '@tetcoin/util';
+import { decodeAddress, encodeAddress, keyExtractSuri, keyFromPath, naclKeypairFromSeed as naclFromSeed, schnorrkelKeypairFromSeed as schnorrkelFromSeed, mnemonicToMiniSecret } from '@tetcoin/util-crypto';
 
 import { DEV_PHRASE } from './defaults';
 import createPair from './pair';
 import Pairs from './pairs';
 
 /**
- * # @polkadot/keyring
+ * # @tetcoin/keyring
  *
  * ## Overview
  *
@@ -244,7 +244,7 @@ export default class Keyring implements KeyringInstance {
    * @summary Returns a JSON object associated with the input argument that contains metadata assocated with an account
    * @description Returns a JSON object containing the metadata associated with an account
    * when valid address or public key and when the account passphrase is provided if the account secret
-   * is not already unlocked and available in memory. Note that in [Polkadot-JS Apps](https://github.com/polkadot-js/apps) the user
+   * is not already unlocked and available in memory. Note that in [Tetcoin-JS Apps](https://github.com/tetcoin-js/apps) the user
    * may backup their account to a JSON file that contains this information.
    */
   public toJson (address: string | Uint8Array, passphrase?: string): KeyringPair$Json {

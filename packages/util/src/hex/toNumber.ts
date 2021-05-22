@@ -13,7 +13,7 @@ import hexToBn from './toBn';
  * <BR>
  *
  * ```javascript
- * import { hexToNumber } from '@polkadot/util';
+ * import { hexToNumber } from '@tetcoin/util';
  *
  * hexToNumber('0x1234'); // => 0x1234
  * ```

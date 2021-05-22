@@ -12,7 +12,7 @@ module.exports = {
   includeDeclarations: false,
   module: 'commonjs',
   moduleResolution: 'node',
-  name: 'Polkadot JS Common',
+  name: 'Tetcoin JS Common',
   out: 'docs',
   stripInternal: 'true',
   theme: 'markdown'

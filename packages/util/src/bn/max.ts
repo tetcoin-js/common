@@ -14,7 +14,7 @@ import assert from '../assert';
  *
  * ```javascript
  * import BN from 'bn.js';
- * import { bnMax } from '@polkadot/util';
+ * import { bnMax } from '@tetcoin/util';
  *
  * bnMax([new BN(1), new BN(3), new BN(2)]).toString(); // => '3'
  * ```

@@ -16,7 +16,7 @@ import { DEFAULT_BITLENGTH } from './defaults';
  * <BR>
  *
  * ```javascript
- * import { compactFromU8a } from '@polkadot/util';
+ * import { compactFromU8a } from '@tetcoin/util';
  *
  * const [offset, length] = compactFromU8a(new Uint8Array([254, 255, 3, 0]), 32));
  *

@@ -4,10 +4,10 @@
 
 import { Prefix } from './types';
 
-// Original implementation: https://github.com/paritytech/polka-ui/blob/4858c094684769080f5811f32b081dd7780b0880/src/polkadot.js#L6
+// Original implementation: https://github.com/paritytech/polka-ui/blob/4858c094684769080f5811f32b081dd7780b0880/src/tetcoin.js#L6
 
 import bs58 from 'bs58';
-import { assert, bufferToU8a, isHex, isU8a, u8aToU8a } from '@polkadot/util';
+import { assert, bufferToU8a, isHex, isU8a, u8aToU8a } from '@tetcoin/util';
 
 import checkChecksum from './checkChecksum';
 import defaults from './defaults';

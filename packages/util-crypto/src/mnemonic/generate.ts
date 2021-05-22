@@ -5,7 +5,7 @@
 import '../polyfill';
 
 import { generateMnemonic } from 'bip39';
-import { bip39Generate, isReady } from '@polkadot/wasm-crypto';
+import { bip39Generate, isReady } from '@tetcoin/wasm-crypto';
 
 export type WordCount = 12 | 15 | 18 | 21 | 24;
 
@@ -25,7 +25,7 @@ const STRENGTH_MAP = {
  * <BR>
  *
  * ```javascript
- * import { mnemonicGenerate } from '@polkadot/util-crypto';
+ * import { mnemonicGenerate } from '@tetcoin/util-crypto';
  *
  * const mnemonic = mnemonicGenerate(); // => string
  * ```

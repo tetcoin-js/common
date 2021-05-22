@@ -4,7 +4,7 @@
 
 import { KeyringInstance, KeyringOptions } from './types';
 
-import { hexToU8a } from '@polkadot/util';
+import { hexToU8a } from '@tetcoin/util';
 
 import createPair from './pair';
 import Keyring from '.';

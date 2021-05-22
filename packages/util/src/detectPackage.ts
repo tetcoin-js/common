@@ -19,7 +19,7 @@ interface VersionPath {
 }
 
 interface PjsChecks extends This {
-  __polkadotjs: Record<string, VersionPath[]>;
+  __tetcoinjs: Record<string, VersionPath[]>;
 }
 
 type PjsGlobal = NodeJS.Global & PjsChecks;
@@ -52,16 +52,16 @@ export default function detectPackage ({ name, version }: PackageJson, path?: st
     ? window as PjsWindow
     : global as PjsGlobal;
 
-  if (!_global.__polkadotjs) {
-    _global.__polkadotjs = {};
+  if (!_global.__tetcoinjs) {
+    _global.__tetcoinjs = {};
   }
 
-  assert(name.startsWith('@polkadot'), `Invalid package descriptor ${name}`);
+  assert(name.startsWith('@tetcoin'), `Invalid package descriptor ${name}`);
 
-  _global.__polkadotjs[name] = [...(_global.__polkadotjs[name] || []), { path: path || '', version }];
+  _global.__tetcoinjs[name] = [...(_global.__tetcoinjs[name] || []), { path: path || '', version }];
 
-  if (_global.__polkadotjs[name].length !== 1) {
-    const versions = flattenVersions(_global.__polkadotjs[name]);
+  if (_global.__tetcoinjs[name].length !== 1) {
+    const versions = flattenVersions(_global.__tetcoinjs[name]);
 
     console.warn(`Multiple instances of ${name} detected, ensure that there is only one package in your dependency tree.\n${versions}`);
   }

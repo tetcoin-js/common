@@ -27,7 +27,7 @@ try {
  * <BR>
  *
  * ```javascript
- * import { u8aToString } from '@polkadot/util';
+ * import { u8aToString } from '@tetcoin/util';
  *
  * u8aToString(new Uint8Array([0x68, 0x65, 0x6c, 0x6c, 0x6f])); // hello
  * ```

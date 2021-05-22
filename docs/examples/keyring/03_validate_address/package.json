@@ -1,7 +1,7 @@
 {
   "name": "03_validate_address",
   "version": "0.1.0",
-  "description": "Example showing how to validate a polkadot address",
+  "description": "Example showing how to validate a tetcoin address",
   "main": "index.js",
   "author": "Jesse",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "@polkadot/keyring": "*"
+    "@tetcoin/keyring": "*"
   },
   "devDependencies": {
     "rimraf": "^2.6.2"

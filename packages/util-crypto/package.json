@@ -1,10 +1,10 @@
 {
-  "name": "@polkadot/util-crypto",
+  "name": "@tetcoin/util-crypto",
   "version": "2.8.1",
-  "description": "A collection of useful crypto utilities for @polkadot",
+  "description": "A collection of useful crypto utilities for @tetcoin",
   "main": "index.js",
   "keywords": [
-    "Polkadot"
+    "Tetcoin"
   ],
   "author": "Jaco Greeff <jacogr@gmail.com>",
   "maintainers": [
@@ -18,16 +18,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/polkadot-js/common.git"
+    "url": "git+https://github.com/tetcoin-js/common.git"
   },
   "bugs": {
-    "url": "https://github.com/polkadot-js/common/issues"
+    "url": "https://github.com/tetcoin-js/common/issues"
   },
-  "homepage": "https://github.com/polkadot-js/common/tree/master/packages/util-crypto#readme",
+  "homepage": "https://github.com/tetcoin-js/common/tree/master/packages/util-crypto#readme",
   "dependencies": {
     "@babel/runtime": "^7.9.2",
-    "@polkadot/util": "2.8.1",
-    "@polkadot/wasm-crypto": "^1.2.1",
+    "@tetcoin/util": "2.8.1",
+    "@tetcoin/wasm-crypto": "^1.2.1",
     "base-x": "^3.0.8",
     "bip39": "^3.0.2",
     "blakejs": "^1.1.0",

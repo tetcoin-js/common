@@ -11,7 +11,7 @@
  * <BR>
  *
  * ```javascript
- * import { isString } from '@polkadot/util';
+ * import { isString } from '@tetcoin/util';
  *
  * console.log('isString', isString('test')); // => true
  * ```

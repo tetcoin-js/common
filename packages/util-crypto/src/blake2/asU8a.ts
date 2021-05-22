@@ -3,8 +3,8 @@
 // of the Apache-2.0 license. See the LICENSE file for details.
 
 import blakejs from 'blakejs';
-import { u8aToU8a } from '@polkadot/util';
-import { blake2b, isReady } from '@polkadot/wasm-crypto';
+import { u8aToU8a } from '@tetcoin/util';
+import { blake2b, isReady } from '@tetcoin/wasm-crypto';
 
 /**
  * @name blake2AsU8a
@@ -15,7 +15,7 @@ import { blake2b, isReady } from '@polkadot/wasm-crypto';
  * <BR>
  *
  * ```javascript
- * import { blake2AsU8a } from '@polkadot/util-crypto';
+ * import { blake2AsU8a } from '@tetcoin/util-crypto';
  *
  * blake2AsU8a('abc'); // => [0xba, 0x80, 0xa53, 0xf98, 0x1c, 0x4d, 0x0d]
  * ```

@@ -11,7 +11,7 @@
  * <BR>
  *
  * ```javascript
- * import { stringLowerFirst } from '@polkadot/util';
+ * import { stringLowerFirst } from '@tetcoin/util';
  *
  * stringLowerFirst('ABC'); // => 'aBC'
  * ```

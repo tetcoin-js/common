@@ -31,7 +31,7 @@ try {
  * <BR>
  *
  * ```javascript
- * import { stringToU8a } from '@polkadot/util';
+ * import { stringToU8a } from '@tetcoin/util';
  *
  * stringToU8a('hello'); // [0x68, 0x65, 0x6c, 0x6c, 0x6f]
  * ```

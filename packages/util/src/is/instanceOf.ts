@@ -11,7 +11,7 @@
  * <BR>
  *
  * ```javascript
- * import { isInstanceOf } from '@polkadot/util';
+ * import { isInstanceOf } from '@tetcoin/util';
  *
  * console.log('isInstanceOf', isInstanceOf(new Array(0), Array)); // => true
  * ```

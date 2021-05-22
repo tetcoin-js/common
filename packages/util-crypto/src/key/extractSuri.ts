@@ -2,7 +2,7 @@
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
 
-import { assert, isNull } from '@polkadot/util';
+import { assert, isNull } from '@tetcoin/util';
 
 import DeriveJunction from './DeriveJunction';
 import keyExtractPath from './extractPath';

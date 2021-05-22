@@ -14,7 +14,7 @@ import assert from '../assert';
  *
  * ```javascript
  * import BN from 'bn.js';
- * import { bnMin } from '@polkadot/util';
+ * import { bnMin } from '@tetcoin/util';
  *
  * bnMin([new BN(1), new BN(3), new BN(2)]).toString(); // => '1'
  * ```

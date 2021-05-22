@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-const { mnemonicGenerate, mnemonicToSeed, mnemonicValidate, naclKeypairFromSeed } = require('@polkadot/util-crypto');
+const { mnemonicGenerate, mnemonicToSeed, mnemonicValidate, naclKeypairFromSeed } = require('@tetcoin/util-crypto');
 
 async function main () {
   // Create mnemonic string for Alice using BIP39

@@ -1,11 +1,11 @@
 /* eslint-disable header/header */
 
-const { decodeAddress, encodeAddress } = require('@polkadot/keyring');
-const { hexToU8a, isHex } = require('@polkadot/util');
+const { decodeAddress, encodeAddress } = require('@tetcoin/keyring');
+const { hexToU8a, isHex } = require('@tetcoin/util');
 
 const address = '5GrpknVvGGrGH3EFuURXeMrWHvbpj3VfER1oX5jFtuGbfzCE';
 
-const isValidAddressPolkadotAddress = () => {
+const isValidAddressTetcoinAddress = () => {
   try {
     encodeAddress(
       isHex(address)
@@ -19,6 +19,6 @@ const isValidAddressPolkadotAddress = () => {
   }
 };
 
-const isValid = isValidAddressPolkadotAddress();
+const isValid = isValidAddressTetcoinAddress();
 
 console.log(isValid);

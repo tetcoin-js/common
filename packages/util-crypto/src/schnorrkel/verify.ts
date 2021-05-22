@@ -4,8 +4,8 @@
 
 import '../polyfill';
 
-import { u8aToU8a } from '@polkadot/util';
-import { sr25519Verify } from '@polkadot/wasm-crypto';
+import { u8aToU8a } from '@tetcoin/util';
+import { sr25519Verify } from '@tetcoin/wasm-crypto';
 
 /**
  * @name schnorrkelVerify
